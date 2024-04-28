@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=8 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_5dvk3"]
+[ext_resource type="Theme" uid="uid://si0fw54n8opn" path="res://ressources/themes/main_theme.tres" id="2_t8fvl"]
+[ext_resource type="Texture2D" uid="uid://dm02teog13ta0" path="res://scenes/main/assets/press.png" id="3_6y7wl"]
+[ext_resource type="Texture2D" uid="uid://c62bewv6lneiv" path="res://scenes/main/assets/donotpress.png" id="4_0lyec"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_r3p2a"]
 action = &"button"
@@ -9,42 +12,53 @@ pressed = true
 [sub_resource type="Shortcut" id="Shortcut_uctu7"]
 events = [SubResource("InputEventAction_r3p2a")]
 
-[node name="Main" type="CanvasLayer"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k35ej"]
+bg_color = Color(0.968354, 0.382918, 0.299316, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 40.0
+expand_margin_top = 40.0
+expand_margin_right = 40.0
+expand_margin_bottom = 40.0
+
+[node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="GamePanel" type="PanelContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="PanelContainer"]
+[node name="ColorRect" type="ColorRect" parent="GamePanel"]
 layout_mode = 2
-color = Color(0, 0.279757, 0.284313, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="GamePanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GamePanel/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="ScoreLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ScoreLabel" type="Label" parent="GamePanel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("2_t8fvl")
 text = "Score : 0"
 
-[node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="GamePanel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="MainButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="MainButton" type="Button" parent="GamePanel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -52,13 +66,23 @@ size_flags_vertical = 4
 shortcut = SubResource("Shortcut_uctu7")
 text = "Button"
 
-[node name="Control2" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Control2" type="Control" parent="GamePanel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="GiveUpButton" type="Button" parent="PanelContainer/MarginContainer"]
+[node name="GiveUpButton" type="Button" parent="GamePanel/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_k35ej")
 text = "GIVE UP"
+
+[node name="Press" type="Sprite2D" parent="."]
+position = Vector2(392, 256)
+texture = ExtResource("3_6y7wl")
+
+[node name="Donotpress" type="Sprite2D" parent="."]
+position = Vector2(808, 528)
+scale = Vector2(0.345161, 0.345161)
+texture = ExtResource("4_0lyec")

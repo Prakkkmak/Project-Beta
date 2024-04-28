@@ -1,5 +1,5 @@
 class_name Main
-extends CanvasLayer
+extends Node
 
 @export_file("*.tscn") var end_screen_file_path: String = "res://screens/end_screen/end_screen.tscn"
 

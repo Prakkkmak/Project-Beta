@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://omuui48sk7tt"]
+
+[ext_resource type="Script" path="res://screens/leaderboard_screen/player_score/leaderboard_screen.gd" id="1_e1cos"]
+
+[node name="PlayerScore" type="HBoxContainer"]
+script = ExtResource("1_e1cos")
+
+[node name="PlayerPositionLabel" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "10"
+
+[node name="PlayerNameLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+text = "George"
+
+[node name="Space" type="Control" parent="."]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerScoreLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+text = "45548"
