@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=4 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_5dvk3"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_r3p2a"]
+action = &"button"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_uctu7"]
+events = [SubResource("InputEventAction_r3p2a")]
 
 [node name="Main" type="CanvasLayer"]
 script = ExtResource("1_5dvk3")
@@ -42,6 +49,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+shortcut = SubResource("Shortcut_uctu7")
 text = "Button"
 
 [node name="Control2" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer"]
