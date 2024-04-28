@@ -11,6 +11,6 @@ func _ready() -> void:
 
 func _on_start_button_pressed() -> void:
 	if !end_screen_file_path:
-		push_warning("No title screen file path set")
+		push_warning("No end screen file path set")
 		return
 	get_tree().change_scene_to_file(end_screen_file_path)
