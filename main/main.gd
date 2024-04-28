@@ -10,7 +10,7 @@ extends Node
 @onready var main_button: TextureButton = %MainButton
 @onready var give_up_button: TextureButton = %GiveUpButton
 @onready var score_label: Label = %ScoreLabel
-@onready var quest_panel: QuestPanel = $QuestPanel
+@onready var quest_generator: QuestGenerator = $QuestGenerator
 
 
 func _ready() -> void:
@@ -21,12 +21,12 @@ func _ready() -> void:
 func _increment_score(delta: int = 1) -> void:
 	score += delta
 	_update_score_label()
-	if score == 10:
+	if score == 1:
 		var quest: Quest = Quest.new()
 		quest.max_value = 20
 		quest.text = "Clic the button"
 		main_button.pressed.connect(quest.progress)
-		quest_panel.add_quest(quest)
+		quest_generator.add_quest(quest)
 
 
 func _update_score_label() -> void:

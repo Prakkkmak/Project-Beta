@@ -1,8 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyseefdx12w0l"]
+[gd_scene load_steps=9 format=3 uid="uid://cyseefdx12w0l"]
 
 [ext_resource type="Script" path="res://quest/quest_display/quest_display.gd" id="1_t31qd"]
+[ext_resource type="Texture2D" uid="uid://hlxp4xrdktr5" path="res://assets/sprites/post_it.png" id="2_gqk57"]
+[ext_resource type="PackedScene" uid="uid://dton4hbxdwmqg" path="res://components/drag_area/drag_area.tscn" id="3_gkgat"]
 
-[sub_resource type="Animation" id="Animation_r6dpt"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf77y"]
+size = Vector2(226, 42)
+
+[sub_resource type="Animation" id="Animation_hxn6j"]
+resource_name = "pop_in"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_u3kq8"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -14,63 +35,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("QuestLabel:theme_override_colors/font_color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"values": [Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_iw8u5"]
-resource_name = "pop_in"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_gc01p"]
+[sub_resource type="Animation" id="Animation_msy80"]
 resource_name = "pop_out"
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -78,69 +48,50 @@ tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.7, 1),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(0.1, 0.1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.6, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("QuestLabel:theme_override_colors/font_color")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 0, 1), Color(1, 1, 0, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:rotation")
-tracks/3/interp = 2
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0872665, 0.0]
+"values": [Vector2(1, 1), Vector2(0, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0koo3"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_to7ww"]
 _data = {
-"RESET": SubResource("Animation_r6dpt"),
-"pop_in": SubResource("Animation_iw8u5"),
-"pop_out": SubResource("Animation_gc01p")
+"RESET": SubResource("Animation_u3kq8"),
+"pop_in": SubResource("Animation_hxn6j"),
+"pop_out": SubResource("Animation_msy80")
 }
 
-[node name="Quest" type="VBoxContainer"]
-scale = Vector2(1e-05, 1e-05)
+[node name="QuestDisplay" type="Node2D"]
+z_index = 1
 script = ExtResource("1_t31qd")
+
+[node name="DragArea" parent="." node_paths=PackedStringArray("dragged_node") instance=ExtResource("3_gkgat")]
+unique_name_in_owner = true
+dragged_node = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragArea"]
+position = Vector2(7, -85)
+shape = SubResource("RectangleShape2D_cf77y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gqk57")
 
 [node name="QuestLabel" type="Label" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 69.0
+offset_bottom = -41.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Achieve 10 pushs"
 
 [node name="QuestProgressBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 10)
-layout_mode = 2
+offset_left = -72.0
+offset_top = 40.0
+offset_right = 61.0
+offset_bottom = 50.0
 max_value = 10.0
 step = 1.0
 show_percentage = false
@@ -148,5 +99,7 @@ show_percentage = false
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_0koo3")
+"": SubResource("AnimationLibrary_to7ww")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]

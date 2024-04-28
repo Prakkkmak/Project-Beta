@@ -1,5 +1,5 @@
 class_name QuestDisplay
-extends VBoxContainer
+extends Node2D
 
 
 @export var quest: Quest
@@ -49,3 +49,5 @@ func _on_quest_progressed() -> void:
 
 func _on_quest_completed() -> void:
 	remove_display()
+
+

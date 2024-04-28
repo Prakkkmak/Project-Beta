@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq2ovr1h4v737"]
+
+[ext_resource type="Script" path="res://quest/quest_generator/quest_generator.gd" id="1_jc30j"]
+[ext_resource type="PackedScene" uid="uid://cyseefdx12w0l" path="res://quest/quest_display/quest_display.tscn" id="2_62idu"]
+
+[node name="QuestGenerator" type="Marker2D"]
+script = ExtResource("1_jc30j")
+quest_display_scene = ExtResource("2_62idu")
