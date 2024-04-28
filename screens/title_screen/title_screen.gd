@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export_file("*.tscn") var end_screen_file_path: String = "res://scenes/ui/screens/end_screen/end_screen.tscn"
+@export_file("*.tscn") var end_screen_file_path: String = "res://scenes/main/main.tscn"
 
 @onready var start_button: Button = %StartButton
 

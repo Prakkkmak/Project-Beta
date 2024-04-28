@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export_file("*.tscn") var title_screen_file_path: String = "res://scenes/ui/screens/title_screen/title_screen.tscn"
+@export_file("*.tscn") var title_screen_file_path: String = "res://screens/title_screen/title_screen.tscn"
 
 @onready var restart_button: Button = %RestartButton
 
