@@ -3,12 +3,14 @@ extends Node
 
 @export_file("*.tscn") var end_screen_file_path: String = "res://screens/end_screen/end_screen.tscn"
 
+
 @export_range(0,1000) var score: int = 0
 
 
 @onready var main_button: Button = %MainButton
 @onready var give_up_button: Button = %GiveUpButton
 @onready var score_label: Label = %ScoreLabel
+@onready var quest_panel: QuestPanel = $QuestPanel
 
 
 func _ready() -> void:
@@ -16,13 +18,23 @@ func _ready() -> void:
 	main_button.pressed.connect(_on_main_button_pressed)
 
 
+func _increment_score(delta: int = 1) -> void:
+	score += delta
+	_update_score_label()
+	if score == 10:
+		var quest: Quest = Quest.new()
+		quest.max_value = 20
+		quest.text = "Clic the button"
+		main_button.pressed.connect(quest.progress)
+		quest_panel.add_quest(quest)
+
+
 func _update_score_label() -> void:
 	score_label.text = "Score: " + str(score)
 
 
 func _on_main_button_pressed() -> void:
-	score += 1
-	_update_score_label()
+	_increment_score()
 
 
 func _on_give_up_button_pressed() -> void:

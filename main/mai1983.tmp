@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=9 format=3 uid="uid://b56hrpj2ihat8"]
 
-[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_5dvk3"]
+[ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
+[ext_resource type="PackedScene" uid="uid://cagxvh7b3wouh" path="res://quest/quest_panel/quest_panel.tscn" id="2_qlybt"]
 [ext_resource type="Theme" uid="uid://si0fw54n8opn" path="res://ressources/themes/main_theme.tres" id="2_t8fvl"]
-[ext_resource type="Texture2D" uid="uid://dm02teog13ta0" path="res://scenes/main/assets/press.png" id="3_6y7wl"]
-[ext_resource type="Texture2D" uid="uid://c62bewv6lneiv" path="res://scenes/main/assets/donotpress.png" id="4_0lyec"]
+[ext_resource type="Texture2D" uid="uid://dm02teog13ta0" path="res://main/assets/press.png" id="3_6y7wl"]
+[ext_resource type="Texture2D" uid="uid://c62bewv6lneiv" path="res://main/assets/donotpress.png" id="4_0lyec"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_r3p2a"]
 action = &"button"
@@ -77,6 +78,12 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_styles/normal = SubResource("StyleBoxFlat_k35ej")
 text = "GIVE UP"
+
+[node name="QuestPanel" parent="." instance=ExtResource("2_qlybt")]
+offset_left = 488.0
+offset_top = 76.0
+offset_right = 488.0
+offset_bottom = 76.0
 
 [node name="Press" type="Sprite2D" parent="."]
 position = Vector2(392, 256)
