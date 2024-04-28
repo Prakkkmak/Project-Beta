@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://omuui48sk7tt"]
 
-[ext_resource type="Script" path="res://screens/leaderboard_screen/player_score/leaderboard_screen.gd" id="1_e1cos"]
+[ext_resource type="Script" path="res://screens/leaderboard_screen/player_score/player_score.gd" id="1_e1cos"]
 
 [node name="PlayerScore" type="HBoxContainer"]
 script = ExtResource("1_e1cos")
