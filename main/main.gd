@@ -7,8 +7,8 @@ extends Node
 @export_range(0,1000) var score: int = 0
 
 
-@onready var main_button: Button = %MainButton
-@onready var give_up_button: Button = %GiveUpButton
+@onready var main_button: TextureButton = %MainButton
+@onready var give_up_button: TextureButton = %GiveUpButton
 @onready var score_label: Label = %ScoreLabel
 @onready var quest_panel: QuestPanel = $QuestPanel
 
