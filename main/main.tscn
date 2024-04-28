@@ -28,6 +28,7 @@ expand_margin_bottom = 40.0
 script = ExtResource("1_5dvk3")
 
 [node name="GamePanel" type="PanelContainer" parent="."]
+modulate = Color(0.611765, 0.780392, 0.741176, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
