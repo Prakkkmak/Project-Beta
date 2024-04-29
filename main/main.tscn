@@ -41,6 +41,16 @@ quest_generator = NodePath("../../QuestGenerator")
 [node name="QuestGenerator" parent="." instance=ExtResource("6_m3cg2")]
 position = Vector2(-400, -168)
 
+[node name="TextDisplay" type="Marker2D" parent="."]
+position = Vector2(0, 256)
+
+[node name="Label" type="Label" parent="TextDisplay"]
+offset_left = -56.0
+offset_top = -16.0
+offset_right = 69.0
+offset_bottom = 7.0
+text = "Message de test"
+
 [node name="ScoreLabel" parent="." instance=ExtResource("3_klaia")]
 unique_name_in_owner = true
 
@@ -54,13 +64,3 @@ position = Vector2(440, 187)
 
 [node name="MainCamera" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
-
-[node name="TextDisplay" type="Marker2D" parent="."]
-position = Vector2(0, 256)
-
-[node name="Label" type="Label" parent="TextDisplay"]
-offset_left = -56.0
-offset_top = -16.0
-offset_right = 69.0
-offset_bottom = 7.0
-text = "Message de test"

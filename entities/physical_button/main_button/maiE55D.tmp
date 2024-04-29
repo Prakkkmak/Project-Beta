@@ -12,6 +12,7 @@ radius = 168.19
 input_pickable = true
 freeze = true
 script = ExtResource("2_mbwbi")
+cooldown = null
 
 [node name="ClickableComponent" parent="." node_paths=PackedStringArray("collision_object", "sprite") instance=ExtResource("4_k08nv")]
 collision_object = NodePath("..")
@@ -28,4 +29,3 @@ shape = SubResource("CircleShape2D_sbnt8")
 
 [node name="CooldownTimer" type="Timer" parent="."]
 wait_time = 2.0
-one_shot = true

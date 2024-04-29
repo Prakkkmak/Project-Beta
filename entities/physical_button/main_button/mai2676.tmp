@@ -28,4 +28,3 @@ shape = SubResource("CircleShape2D_sbnt8")
 
 [node name="CooldownTimer" type="Timer" parent="."]
 wait_time = 2.0
-one_shot = true
