@@ -1,37 +1,39 @@
-[gd_scene load_steps=7 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=10 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
+[ext_resource type="PackedScene" uid="uid://b64hh2ju2u6yq" path="res://threshold/threshold_manager/threshold_manager.tscn" id="2_va2w2"]
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="3_by1j8"]
+[ext_resource type="PackedScene" uid="uid://bguoytho4ebks" path="res://threshold/handlers/text_threshold_handler/text_threshold_handler.tscn" id="3_fgpy2"]
 [ext_resource type="PackedScene" uid="uid://ctbuqtaq52u40" path="res://score/score_label/score_label.tscn" id="3_klaia"]
 [ext_resource type="PackedScene" uid="uid://d4m6l6ww8tqs4" path="res://entities/physical_button/main_button/main_button.tscn" id="4_ebyq7"]
 [ext_resource type="PackedScene" uid="uid://cqeo47q3m23dd" path="res://entities/physical_button/give_up_button/give_up_button.tscn" id="5_ynr3d"]
 [ext_resource type="PackedScene" uid="uid://cq2ovr1h4v737" path="res://quest/quest_generator/quest_generator.tscn" id="6_m3cg2"]
-[ext_resource type="PackedScene" uid="uid://cyseefdx12w0l" path="res://quest/quest_display/quest_display.tscn" id="7_uxwlv"]
+
+[sub_resource type="Resource" id="Resource_qsp1t"]
+script = ExtResource("3_by1j8")
+texts_to_display = Array[String](["Test de treshold"])
+score = 10
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
-end_screen_file_path = null
-score = null
 
-[node name="ScoreManager" type="Node" parent="."]
+[node name="ThresholdManager" parent="." instance=ExtResource("2_va2w2")]
+event_thresholds = Array[Resource("res://threshold/event_threshold/EventThreshold.gd")]([SubResource("Resource_qsp1t")])
+
+[node name="TextThresholdHandler" parent="ThresholdManager" instance=ExtResource("3_fgpy2")]
+
+[node name="QuestGenerator" parent="." instance=ExtResource("6_m3cg2")]
+position = Vector2(-400, -168)
 
 [node name="ScoreLabel" parent="." instance=ExtResource("3_klaia")]
 unique_name_in_owner = true
 
 [node name="MainButton" parent="." instance=ExtResource("4_ebyq7")]
 unique_name_in_owner = true
+position = Vector2(104, -64)
 
 [node name="GiveUpButton" parent="." instance=ExtResource("5_ynr3d")]
 unique_name_in_owner = true
 position = Vector2(440, 187)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="QuestGenerator" parent="." instance=ExtResource("6_m3cg2")]
-position = Vector2(-400, -168)
-
-[node name="QuestDisplay" parent="." instance=ExtResource("7_uxwlv")]
-position = Vector2(-600, -40)
-
-[node name="QuestDisplay2" parent="." instance=ExtResource("7_uxwlv")]
-z_index = 0
-position = Vector2(-640, 137)

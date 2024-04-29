@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bguoytho4ebks"]
+
+[ext_resource type="Script" path="res://threshold/handlers/text_threshold_handler/text_threshold_handler.gd" id="1_djo7l"]
+
+[node name="TextThresholdHandler" type="Node"]
+script = ExtResource("1_djo7l")

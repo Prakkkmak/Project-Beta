@@ -4,7 +4,7 @@ extends Node
 @export_file("*.tscn") var end_screen_file_path: String = "res://screens/end_screen/end_screen.tscn"
 
 
-@export_range(0,1000) var score: int = 0
+@export_range(0,1000) var starting_score: int = 0
 
 
 @onready var give_up_button: GiveUpButton = %GiveUpButton
@@ -15,10 +15,7 @@ func _ready() -> void:
 	if !give_up_button:
 		return
 	give_up_button.pressed.connect(_on_give_up_button_pressed)
-
-
-func _increment_score(delta: int = 1) -> void:
-	score += delta
+	Score.change_score(starting_score)
 
 func _on_give_up_button_pressed() -> void:
 	if !end_screen_file_path:
