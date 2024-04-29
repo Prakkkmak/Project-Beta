@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctbuqtaq52u40"]
+
+[ext_resource type="Script" path="res://score/score_label/score_label.gd" id="1_6bwq0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qd6nn"]
+bg_color = Color(0.386371, 0.623132, 0.349432, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rg8wa"]
+bg_color = Color(0.423529, 0.67451, 0.384314, 1)
+corner_radius_bottom_right = 20
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14s2m"]
+bg_color = Color(0.244199, 0.41228, 0.218051, 1)
+
+[sub_resource type="Theme" id="Theme_uvqim"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_qd6nn")
+Button/styles/normal = SubResource("StyleBoxFlat_rg8wa")
+Button/styles/pressed = SubResource("StyleBoxFlat_14s2m")
+Label/colors/font_color = Color(0, 0, 0, 1)
+
+[node name="ScoreLabel" type="Label"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -608.0
+offset_top = -572.0
+offset_right = -543.0
+offset_bottom = -549.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_uvqim")
+text = "Score : 0"
+script = ExtResource("1_6bwq0")

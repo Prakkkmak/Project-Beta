@@ -1,21 +1,24 @@
 @tool
-class_name PhysicalButton
-extends RigidBody2D
+class_name ClickableComponent
+extends Node
 
 signal pressed
 signal released
 
+@export var collision_object: CollisionObject2D
+
+@export var sprite: Sprite2D
 @export var normal_texture: Texture
 @export var pressed_texture: Texture
 
-@onready var sprite: Sprite2D = $Sprite
-
 
 func _ready() -> void:
+	if !collision_object:
+		return
 	sprite.texture = normal_texture
-	mouse_entered.connect(_on_mouse_entered)
-	mouse_exited.connect(_on_mouse_exited)
-	input_event.connect(_on_input_event)
+	collision_object.mouse_entered.connect(_on_mouse_entered)
+	collision_object.mouse_exited.connect(_on_mouse_exited)
+	collision_object.input_event.connect(_on_input_event)
 
 
 func _on_mouse_entered() -> void:

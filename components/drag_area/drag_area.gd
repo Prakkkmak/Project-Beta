@@ -18,26 +18,20 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if drag:
-		print("++")
 		dragged_node.global_position = get_global_mouse_position() + drag_delta
 
 
 func _on_mouse_entered() -> void:
-	print("entered")
 	Input.set_default_cursor_shape(Input.CURSOR_DRAG)
 
 
 func _on_mouse_exited() -> void:
-	print("exited")
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	print("input for drag")
 	if (event is InputEventMouseButton && event.is_pressed()):
-		print("drag")
 		drag = true
 		drag_delta = dragged_node.global_position - get_global_mouse_position()
 	if (event is InputEventMouseButton && event.is_released()):
-		print("stop drage")
 		drag = false
