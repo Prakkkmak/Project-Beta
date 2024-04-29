@@ -14,7 +14,7 @@ extends Node
 func _ready() -> void:
 	if !give_up_button:
 		return
-	give_up_button.pressed.connect(_on_give_up_button_pressed)
+	give_up_button.released.connect(_on_give_up_button_pressed)
 	Score.change_score(starting_score)
 
 func _on_give_up_button_pressed() -> void:

@@ -1,4 +1,4 @@
 class_name EventThreshold
 extends Resource
 
-@export var score: int 
+@export var score: int
