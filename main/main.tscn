@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=7 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
-[ext_resource type="PackedScene" uid="uid://cpor14hhxvcol" path="res://score/score.tscn" id="2_h1qxp"]
 [ext_resource type="PackedScene" uid="uid://ctbuqtaq52u40" path="res://score/score_label/score_label.tscn" id="3_klaia"]
 [ext_resource type="PackedScene" uid="uid://d4m6l6ww8tqs4" path="res://entities/physical_button/main_button/main_button.tscn" id="4_ebyq7"]
 [ext_resource type="PackedScene" uid="uid://cqeo47q3m23dd" path="res://entities/physical_button/give_up_button/give_up_button.tscn" id="5_ynr3d"]
@@ -15,12 +14,8 @@ score = null
 
 [node name="ScoreManager" type="Node" parent="."]
 
-[node name="Score" parent="." node_paths=PackedStringArray("main_button") instance=ExtResource("2_h1qxp")]
-main_button = NodePath("../MainButton")
-
-[node name="ScoreLabel" parent="." node_paths=PackedStringArray("score") instance=ExtResource("3_klaia")]
+[node name="ScoreLabel" parent="." instance=ExtResource("3_klaia")]
 unique_name_in_owner = true
-score = NodePath("../Score")
 
 [node name="MainButton" parent="." instance=ExtResource("4_ebyq7")]
 unique_name_in_owner = true

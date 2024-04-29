@@ -15,6 +15,7 @@ func _ready() -> void:
 
 
 func _on_pressed() -> void:
+	Score.change_score(1)
 	pressed.emit()
 
 func _on_released() -> void:
