@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpytq5s55blbi"]
+
+[ext_resource type="Script" path="res://entities/physical_button/physical_button.gd" id="1_8gin5"]
+
+[node name="PhysicalButton" type="RigidBody2D"]
+input_pickable = true
+freeze = true
+script = ExtResource("1_8gin5")
+
+[node name="Sprite" type="Sprite2D" parent="."]

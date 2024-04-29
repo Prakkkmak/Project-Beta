@@ -7,13 +7,17 @@ extends Node
 @export_range(0,1000) var score: int = 0
 
 
-@onready var main_button: TextureButton = %MainButton
-@onready var give_up_button: TextureButton = %GiveUpButton
+@onready var main_button: PhysicalButton = %MainButton
+@onready var give_up_button: PhysicalButton = %GiveUpButton
 @onready var score_label: Label = %ScoreLabel
 @onready var quest_generator: QuestGenerator = $QuestGenerator
 
 
 func _ready() -> void:
+	if !main_button:
+		return
+	if !give_up_button:
+		return
 	give_up_button.pressed.connect(_on_give_up_button_pressed)
 	main_button.pressed.connect(_on_main_button_pressed)
 
