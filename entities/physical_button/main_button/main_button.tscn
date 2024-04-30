@@ -74,7 +74,7 @@ collision_object = NodePath("..")
 [node name="Sprites" type="Node2D" parent="."]
 
 [node name="BottomSprite" type="Sprite2D" parent="Sprites"]
-position = Vector2(0, 48)
+position = Vector2(1, 41)
 texture = ExtResource("5_pumhk")
 
 [node name="TopSprite" type="Sprite2D" parent="Sprites"]
