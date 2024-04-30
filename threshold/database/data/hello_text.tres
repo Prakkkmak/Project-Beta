@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://cjgk4aryfctt0"]
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://mcbvkfyymchi"]
 
-[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_5u2pd"]
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_j1gya"]
 
 [resource]
-script = ExtResource("1_5u2pd")
-texts_to_display = Array[String](["Fine you push the button", "Good job", "Now do this until 100"])
+script = ExtResource("1_j1gya")
+texts = Array[String](["Bonjour ! Bienvenue dans ce jeu", "test", "tessst"])
 score = 1
