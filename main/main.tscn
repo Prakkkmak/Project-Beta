@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=13 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
 [ext_resource type="PackedScene" uid="uid://b64hh2ju2u6yq" path="res://threshold/threshold_manager/threshold_manager.tscn" id="2_va2w2"]
@@ -7,7 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://d4m6l6ww8tqs4" path="res://entities/physical_button/main_button/main_button.tscn" id="4_ebyq7"]
 [ext_resource type="PackedScene" uid="uid://cqeo47q3m23dd" path="res://entities/physical_button/give_up_button/give_up_button.tscn" id="5_ynr3d"]
 [ext_resource type="PackedScene" uid="uid://cq2ovr1h4v737" path="res://quest/quest_generator/quest_generator.tscn" id="6_m3cg2"]
+[ext_resource type="Theme" uid="uid://cxo3ge4duc5lx" path="res://theme/theme.tres" id="7_cmwxi"]
 [ext_resource type="PackedScene" uid="uid://bafsrbfcjpeww" path="res://text/text_display/text_display.tscn" id="7_hvn1e"]
+[ext_resource type="Texture2D" uid="uid://ci06ve3ifsx7d" path="res://assets/sprites/press_here.png" id="9_hisgl"]
+[ext_resource type="Texture2D" uid="uid://dhk8v8ce7nipd" path="res://assets/sprites/do_not_touch.png" id="10_rricq"]
+[ext_resource type="Texture2D" uid="uid://bli6rf6r06pfm" path="res://assets/sprites/trash.png" id="11_acek8"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
@@ -19,17 +23,38 @@ event_thresholds = ExtResource("3_vhixw")
 position = Vector2(-400, -168)
 
 [node name="TextDisplay" parent="." instance=ExtResource("7_hvn1e")]
+position = Vector2(2, 372)
 
 [node name="ScoreLabel" parent="." instance=ExtResource("3_klaia")]
 unique_name_in_owner = true
+offset_left = -645.0
+offset_top = -917.0
+offset_right = -519.0
+offset_bottom = -875.0
+theme = ExtResource("7_cmwxi")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
 
 [node name="MainButton" parent="." instance=ExtResource("4_ebyq7")]
 unique_name_in_owner = true
 position = Vector2(8, 24)
+initial_cooldown = 0.0
 
 [node name="GiveUpButton" parent="." instance=ExtResource("5_ynr3d")]
 unique_name_in_owner = true
-position = Vector2(440, 187)
+position = Vector2(1030, 523)
 
 [node name="MainCamera" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
+
+[node name="PressHere" type="Sprite2D" parent="."]
+position = Vector2(-325, 201)
+texture = ExtResource("9_hisgl")
+
+[node name="DoNotTouch" type="Sprite2D" parent="."]
+position = Vector2(875, 347)
+texture = ExtResource("10_rricq")
+
+[node name="Trash" type="Sprite2D" parent="."]
+position = Vector2(-1062, 551)
+texture = ExtResource("11_acek8")

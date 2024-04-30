@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cyseefdx12w0l"]
+[gd_scene load_steps=10 format=3 uid="uid://cyseefdx12w0l"]
 
 [ext_resource type="Script" path="res://quest/quest_display/quest_display.gd" id="1_t31qd"]
 [ext_resource type="Texture2D" uid="uid://hlxp4xrdktr5" path="res://assets/sprites/post_it.png" id="2_gqk57"]
 [ext_resource type="PackedScene" uid="uid://dton4hbxdwmqg" path="res://components/drag_area/drag_area.tscn" id="3_gkgat"]
+[ext_resource type="Theme" uid="uid://cxo3ge4duc5lx" path="res://theme/theme.tres" id="4_47ywi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf77y"]
 size = Vector2(226, 42)
@@ -78,12 +79,14 @@ texture = ExtResource("2_gqk57")
 
 [node name="QuestLabel" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 69.0
-offset_bottom = -41.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = -60.0
+offset_top = -89.0
+offset_right = 74.0
+offset_bottom = -66.0
+theme = ExtResource("4_47ywi")
 text = "Achieve 10 pushs"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="QuestProgressBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true

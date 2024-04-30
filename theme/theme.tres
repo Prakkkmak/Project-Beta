@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cxo3ge4duc5lx"]
+
+[ext_resource type="FontFile" uid="uid://csh0tg2utecuq" path="res://theme/fonts/Nunito-Black.ttf" id="1_4xb5n"]
+
+[resource]
+Label/colors/font_color = Color(0.227451, 0.34902, 0.419608, 1)
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_4xb5n")
