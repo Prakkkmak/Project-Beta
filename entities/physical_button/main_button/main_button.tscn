@@ -1,32 +1,95 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4m6l6ww8tqs4"]
+[gd_scene load_steps=10 format=3 uid="uid://d4m6l6ww8tqs4"]
 
 [ext_resource type="Script" path="res://entities/physical_button/main_button/main_button.gd" id="2_mbwbi"]
-[ext_resource type="Texture2D" uid="uid://bs68gnycrcv8j" path="res://entities/physical_button/main_button/the_button.png" id="3_a8v8l"]
 [ext_resource type="PackedScene" uid="uid://s4t5kem7tq4r" path="res://components/clickable_component/clickable_component.tscn" id="4_k08nv"]
-[ext_resource type="Texture2D" uid="uid://bnyuqjf53gigj" path="res://entities/physical_button/main_button/the_button_pressed.png" id="4_ykwct"]
+[ext_resource type="Texture2D" uid="uid://b4w6ein6jq85n" path="res://entities/physical_button/main_button/the_button_bottom.png" id="5_pumhk"]
+[ext_resource type="Texture2D" uid="uid://c7t6ykkwckxwi" path="res://entities/physical_button/main_button/the_button_top.png" id="6_6ifxq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sbnt8"]
-radius = 168.19
+radius = 180.025
+
+[sub_resource type="Animation" id="Animation_3spmi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/TopSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5, -53)]
+}
+
+[sub_resource type="Animation" id="Animation_g4nt4"]
+resource_name = "press"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/TopSprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5, -53), Vector2(-5, -25)]
+}
+
+[sub_resource type="Animation" id="Animation_njfho"]
+resource_name = "release"
+length = 0.05
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/TopSprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5, -25), Vector2(-5, -53)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oqbwb"]
+_data = {
+"RESET": SubResource("Animation_3spmi"),
+"press": SubResource("Animation_g4nt4"),
+"release": SubResource("Animation_njfho")
+}
 
 [node name="MainButton" type="RigidBody2D"]
 input_pickable = true
 freeze = true
 script = ExtResource("2_mbwbi")
 
-[node name="ClickableComponent" parent="." node_paths=PackedStringArray("collision_object", "sprite") instance=ExtResource("4_k08nv")]
+[node name="ClickableComponent" parent="." node_paths=PackedStringArray("collision_object") instance=ExtResource("4_k08nv")]
 collision_object = NodePath("..")
-sprite = NodePath("../Sprite")
-normal_texture = ExtResource("3_a8v8l")
-pressed_texture = ExtResource("4_ykwct")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(0, 10)
-texture = ExtResource("3_a8v8l")
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="BottomSprite" type="Sprite2D" parent="Sprites"]
+position = Vector2(0, 48)
+texture = ExtResource("5_pumhk")
+
+[node name="TopSprite" type="Sprite2D" parent="Sprites"]
+position = Vector2(-5, -53)
+texture = ExtResource("6_6ifxq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, -24)
+position = Vector2(-6, -40)
 shape = SubResource("CircleShape2D_sbnt8")
 
 [node name="CooldownTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_oqbwb")
+}

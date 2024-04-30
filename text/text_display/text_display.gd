@@ -1,39 +1,53 @@
 extends Marker2D
 
-@onready var label: Label = %Label
-@onready var timer: Timer = %Timer
 
 @export var texts_to_diplay: Array[String] = []
+
+
+@onready var label: Label = %Label
+@onready var timer: Timer = %Timer
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
+
+
+const ANIM_FADE_IN_NAME: String = "fade_in"
+const ANIM_FADE_OUT_NAME: String = "fade_out"
+
+
+var text_displayed: bool = false
 
 
 func _ready() -> void:
 	GlobalEvents.threshold_triggered.connect(_on_threshold_triggered)
 	timer.timeout.connect(_on_timer_timeout)
-
-
-func display_text(text: String) -> void:
-	print(text)
-	_assign_text_to_label(text)
-	_animate_text_display()
+	animation_player.animation_finished.connect(_on_animation_finished)
 
 
 func process_next_step() -> void:
-	if texts_to_diplay.is_empty():
-		timer.stop()
-		label.hide()
+	if text_displayed || texts_to_diplay.is_empty():
 		return
 	display_text(texts_to_diplay[0])
 	texts_to_diplay.remove_at(0)
-	if timer.is_stopped(): 
-		timer.start()
 
 
-func _assign_text_to_label(text: String) -> void:
+func display_text(text: String) -> void:
+	print("Display " + text)
+	text_displayed = true
 	label.text = text
+	animation_player.play(ANIM_FADE_IN_NAME)
 
 
-func _animate_text_display() -> void:
-	label.show()
+func _on_timer_timeout() -> void:
+	animation_player.play(ANIM_FADE_OUT_NAME)
+	process_next_step()
+
+
+func _on_animation_finished(name: String) -> void:
+	if name == ANIM_FADE_IN_NAME:
+		timer.start()
+	if name == ANIM_FADE_OUT_NAME:
+		timer.stop()
+		text_displayed = false
+		process_next_step()
  
 
 func _on_threshold_triggered(event_treshold: EventThreshold) -> void:
@@ -42,10 +56,3 @@ func _on_threshold_triggered(event_treshold: EventThreshold) -> void:
 	var text_event_treshold: TextEventThreshold = event_treshold as TextEventThreshold
 	texts_to_diplay.append_array(text_event_treshold.texts)
 	process_next_step()
-
-
-func _on_timer_timeout() -> void:
-	print("timeout")
-	process_next_step()
-
-

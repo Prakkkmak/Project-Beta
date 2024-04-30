@@ -38,7 +38,7 @@ horizontal_alignment = 1
 [node name="MainButton" parent="." instance=ExtResource("4_ebyq7")]
 unique_name_in_owner = true
 position = Vector2(8, 24)
-initial_cooldown = 0.0
+initial_cooldown = 1.0
 
 [node name="GiveUpButton" parent="." instance=ExtResource("5_ynr3d")]
 unique_name_in_owner = true

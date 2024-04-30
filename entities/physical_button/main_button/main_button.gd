@@ -9,6 +9,7 @@ signal released
 
 @onready var clickable_component: ClickableComponent = $ClickableComponent
 @onready var cooldown_timer: Timer = $CooldownTimer
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var cooldown_enabled: bool = true
 
@@ -17,6 +18,7 @@ func _ready() -> void:
 	clickable_component.pressed.connect(_on_pressed)
 	clickable_component.released.connect(_on_released)
 	cooldown_timer.timeout.connect(_on_cooldown_timer_timeout)
+	cooldown_enabled = initial_cooldown != 0
 	cooldown_timer.wait_time = initial_cooldown
 	GlobalEvents.threshold_triggered.connect(_on_threshold_triggered)
 
@@ -24,11 +26,13 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	Score.change_score(1)
 	pressed.emit()
+	animation_player.play("press")
 	if cooldown_enabled:
 		clickable_component.enabled = false
 		cooldown_timer.start()
 
 func _on_released() -> void:
+	animation_player.play("release")
 	released.emit()
 
 func _on_cooldown_timer_timeout() -> void:

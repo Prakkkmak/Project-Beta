@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="QuestEventThreshold" load_steps=4 format=3 uid="uid://cso411d7nlirl"]
+[gd_resource type="Resource" script_class="QuestEventThreshold" load_steps=4 format=3 uid="uid://dlmhc1nm5d00o"]
 
 [ext_resource type="Script" path="res://threshold/event_threshold/QuestEventThreshold.gd" id="1_bvgdb"]
 [ext_resource type="Script" path="res://quest/quest_display/quest.gd" id="1_tx0yj"]
