@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://mcbvkfyymchi"]
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://cjgk4aryfctt0"]
 
 [ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_j1gya"]
 
 [resource]
 script = ExtResource("1_j1gya")
-texts = Array[String](["Bonjour ! Bienvenue dans ce jeu", "test", "tessst"])
+texts = Array[String]([])
 score = 1

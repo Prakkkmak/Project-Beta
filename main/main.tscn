@@ -26,7 +26,6 @@ unique_name_in_owner = true
 [node name="MainButton" parent="." instance=ExtResource("4_ebyq7")]
 unique_name_in_owner = true
 position = Vector2(8, 24)
-cooldown = null
 
 [node name="GiveUpButton" parent="." instance=ExtResource("5_ynr3d")]
 unique_name_in_owner = true
