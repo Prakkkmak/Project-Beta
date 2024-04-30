@@ -29,9 +29,11 @@ func _on_released() -> void:
 	released.emit()
 
 func _on_cooldown_timer_timeout() -> void:
-	print("timeout")
 	clickable_component.enabled = true
 
 
 func _on_threshold_triggered(event_treshold: EventThreshold) -> void:
-	pass
+	if !(event_treshold is  ButtonCooldownEventThreshold):
+		return
+	var button_cooldown_event_treshold: ButtonCooldownEventThreshold = event_treshold as ButtonCooldownEventThreshold
+	cooldown_timer.wait_time = button_cooldown_event_treshold.cooldown

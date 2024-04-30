@@ -19,6 +19,9 @@ func _init() -> void:
 
 
 func assign_quest(init_quest: Quest) -> void:
+	if !init_quest:
+		push_error("No quest assigned")
+		return
 	quest = init_quest
 	quest.progressed.connect(_on_quest_progressed)
 	quest.changed.connect(_on_quest_progressed)

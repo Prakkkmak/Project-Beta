@@ -11,6 +11,8 @@ func _ready() -> void:
 func add_quest(quest: Quest) -> void:
 	if !quest_display_scene:
 		return
+	if !quest:
+		return
 	var quest_display: QuestDisplay = quest_display_scene.instantiate()
 	add_child(quest_display)
 	quest_display.assign_quest(quest)

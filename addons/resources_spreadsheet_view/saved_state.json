@@ -1,0 +1,14 @@
+{
+  "hidden_columns": {
+    "res://threshold/thresholds/data/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    }
+  },
+  "recent_paths": [
+    "res://threshold/thresholds/data/"
+  ],
+  "table_functions": {
+
+  }
+}
