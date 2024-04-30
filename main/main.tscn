@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
 [ext_resource type="PackedScene" uid="uid://b64hh2ju2u6yq" path="res://threshold/threshold_manager/threshold_manager.tscn" id="2_va2w2"]
 [ext_resource type="PackedScene" uid="uid://ctbuqtaq52u40" path="res://score/score_label/score_label.tscn" id="3_klaia"]
-[ext_resource type="Resource" uid="uid://cpvtsjqkikvrc" path="res://threshold/thresholds_database/all_thresholds.tres" id="3_vhixw"]
+[ext_resource type="Resource" uid="uid://cpvtsjqkikvrc" path="res://threshold/database/all_thresholds.tres" id="3_vhixw"]
 [ext_resource type="PackedScene" uid="uid://d4m6l6ww8tqs4" path="res://entities/physical_button/main_button/main_button.tscn" id="4_ebyq7"]
 [ext_resource type="PackedScene" uid="uid://cqeo47q3m23dd" path="res://entities/physical_button/give_up_button/give_up_button.tscn" id="5_ynr3d"]
 [ext_resource type="PackedScene" uid="uid://cq2ovr1h4v737" path="res://quest/quest_generator/quest_generator.tscn" id="6_m3cg2"]
