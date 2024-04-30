@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://k7c7mla318c2"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_fh2em"]
+
+[resource]
+script = ExtResource("1_fh2em")
+texts = Array[String](["J'éspère que tu as pu faire le ménage", "Atteint les 300 et on en parle plus."])
+score = 235

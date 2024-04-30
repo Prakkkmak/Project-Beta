@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestEventThreshold" load_steps=4 format=3 uid="uid://bas58qrkuouef"]
+
+[ext_resource type="Script" path="res://quest/quest_display/quest.gd" id="1_aknig"]
+[ext_resource type="Script" path="res://threshold/event_threshold/QuestEventThreshold.gd" id="2_gopma"]
+
+[sub_resource type="Resource" id="Resource_5ns36"]
+script = ExtResource("1_aknig")
+id = ""
+text = "Tu devrais abandonner"
+max_value = 0
+
+[resource]
+script = ExtResource("2_gopma")
+quest = SubResource("Resource_5ns36")
+score = 20

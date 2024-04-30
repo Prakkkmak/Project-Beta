@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_5m8kc")
-texts = Array[String](["Que vas tu faire de ces post-its ?"])
+texts = Array[String](["Une des tes premières tâches !"])
 score = 20

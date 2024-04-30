@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestEventThreshold" load_steps=4 format=3 uid="uid://c0vaxka1rqw8w"]
+
+[ext_resource type="Script" path="res://quest/quest_display/quest.gd" id="1_u2omu"]
+[ext_resource type="Script" path="res://threshold/event_threshold/QuestEventThreshold.gd" id="2_oo3d0"]
+
+[sub_resource type="Resource" id="Resource_5ns36"]
+script = ExtResource("1_u2omu")
+id = ""
+text = "Atteint les 500..."
+max_value = 200
+
+[resource]
+script = ExtResource("2_oo3d0")
+quest = SubResource("Resource_5ns36")
+score = 300

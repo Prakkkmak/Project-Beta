@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://btn0sfaa1gb2x"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_bf61e"]
+
+[resource]
+script = ExtResource("1_bf61e")
+texts = Array[String](["Super !", "Tu vas penser que je te prends pour un con.", "Mais ...", "S'il te plait..", "Peut tu atteindre 500?"])
+score = 300

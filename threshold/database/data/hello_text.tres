@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_j1gya")
-texts = Array[String](["Bien joué !", "Tu as compris ton travail."])
+texts = Array[String](["Bien joué !", "C'est fun non ?"])
 score = 1

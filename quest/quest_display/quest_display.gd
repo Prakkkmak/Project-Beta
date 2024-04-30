@@ -7,6 +7,7 @@ extends Node2D
 
 const POP_IN: String = "pop_in"
 const POP_OUT: String = "pop_out"
+const MARK_DONE: String = "mark_done"
 
 
 @onready var quest_label: Label = %QuestLabel
@@ -31,10 +32,17 @@ func assign_quest(init_quest: Quest) -> void:
 
 
 func update_display() -> void:
-	if quest:
-		quest_label.text = quest.text
-		quest_progress_bar.value = quest.value
-		quest_progress_bar.max_value = quest.max_value
+	if !quest:
+		return
+	quest_label.text = quest.text
+	if quest.max_value == 0:
+		quest_progress_bar.hide()
+	quest_progress_bar.value = quest.value
+	quest_progress_bar.max_value = quest.max_value
+
+
+func mark_done() -> void:
+	animation_player.play(MARK_DONE)
 
 
 func remove_display() -> void:
@@ -51,6 +59,6 @@ func _on_quest_progressed() -> void:
 
 
 func _on_quest_completed() -> void:
-	remove_display()
+	mark_done()
 
 

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestEventThreshold" load_steps=4 format=3 uid="uid://tixmxo6n2fe6"]
+
+[ext_resource type="Script" path="res://quest/quest_display/quest.gd" id="1_onvh2"]
+[ext_resource type="Script" path="res://threshold/event_threshold/QuestEventThreshold.gd" id="2_l2o66"]
+
+[sub_resource type="Resource" id="Resource_5ns36"]
+script = ExtResource("1_onvh2")
+id = ""
+text = "bg@aa.com"
+max_value = 25
+
+[resource]
+script = ExtResource("2_l2o66")
+quest = SubResource("Resource_5ns36")
+score = 199

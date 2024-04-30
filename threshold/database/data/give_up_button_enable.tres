@@ -4,18 +4,6 @@
 
 [resource]
 script = ExtResource("1_he12p")
-enable_give_up_button = true
-disable_give_up_button = false
-enable_give_up_button_indication = true
-disable_give_up_button_indication = false
-enable_main_button_button = false
-disable_main_button_button = false
-enable_main_button_indication = false
-disable_main_button_indication = false
-enable_score_label = false
-disable_score_label = false
-enable_trash_bin = false
-disable_trash_bin = false
-enable_light = false
-disable_light = false
-score = 0
+to_enable_list = Array[String](["give_up_button"])
+to_disable_list = Array[String]([])
+score = 110

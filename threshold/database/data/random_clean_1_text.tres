@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://casw7iymj0s3b"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_5p38y"]
+
+[resource]
+script = ExtResource("1_5p38y")
+texts = Array[String](["Raaah.. ", "Comment tout ce bordel arrive ?", "Il faut nettoyer tout ça.", "Continue comme ça,  je vais trouver une solution !"])
+score = 160

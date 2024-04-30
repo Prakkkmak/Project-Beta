@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FeatureEnablerThreshold" load_steps=2 format=3 uid="uid://bvkg0mp3c8h5w"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/FeatureEnablerThreshold.gd" id="1_6v2th"]
+
+[resource]
+script = ExtResource("1_6v2th")
+to_enable_list = Array[String](["trash_bin"])
+to_disable_list = Array[String]([])
+score = 220

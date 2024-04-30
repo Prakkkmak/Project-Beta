@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_h1e5a")
-texts = Array[String](["Wow félicitations !", "Tu es quelqu'un de très productif", "Pour te motiver et en guise de merciements, tu peux voir ton score"])
+texts = Array[String](["TADAM !", "Pour te motiver, tu as désormais un score", "Cool non ?"])
 score = 70
