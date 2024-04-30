@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://dhi4locf0b4sy"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_h1e5a"]
+
+[resource]
+script = ExtResource("1_h1e5a")
+texts = Array[String](["Wow félicitations !", "Tu es quelqu'un de très productif", "Pour te motiver et en guise de merciements, tu peux voir ton score"])
+score = 70

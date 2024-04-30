@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://d0amk7ev338n7"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_c3crc"]
+
+[resource]
+script = ExtResource("1_c3crc")
+texts = Array[String](["Tu vois ce bouton qui est apparu ?", "Ignore le, ça met fin à ton travail.", "Tu ne veux gâcher tout ce que tu as produit pour l'instant !"])
+score = 110

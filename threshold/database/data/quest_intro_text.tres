@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://buagsi42giot3"]
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://dwfaavx1wx434"]
 
 [ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_5m8kc"]
 
 [resource]
 script = ExtResource("1_5m8kc")
-texts = Array[String](["Tiens, un post-it ! Chaque clic peut révéler des quêtes. À toi de les explorer !"])
-score = 2
+texts = Array[String](["Que vas tu faire de ces post-its ?"])
+score = 20

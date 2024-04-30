@@ -17,6 +17,7 @@ func _ready() -> void:
 	give_up_button.released.connect(_on_give_up_button_pressed)
 	Score.change_score(starting_score)
 
+
 func _on_give_up_button_pressed() -> void:
 	if !end_screen_file_path:
 		push_warning("No end screen file path set")

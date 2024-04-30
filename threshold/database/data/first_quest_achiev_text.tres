@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://dhi4locf0b4sy"]
-
-[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_7e1a0"]
-
-[resource]
-script = ExtResource("1_7e1a0")
-texts = Array[String](["Bravo ! Tu as réussi à cliquer 10 fois.", "Je n'ai plus rien à t'apprendre, tu connais tout le gameplay. Il ne te reste plus qu'à cliquer !"])
-score = 12

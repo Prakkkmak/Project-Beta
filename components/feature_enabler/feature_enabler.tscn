@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhqv30wesm0cj"]
+
+[ext_resource type="Script" path="res://components/feature_enabler/feature_enabler.gd" id="1_uypc1"]
+
+[node name="FeatureEnabler" type="Node"]
+script = ExtResource("1_uypc1")

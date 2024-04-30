@@ -33,9 +33,8 @@ func _on_mouse_exited() -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if (event is InputEventMouseButton && event.is_pressed()):
 		if !enabled:
-			print("disabled")
+			print("disabled can't press")
 			return
-		print("enabled")
 		is_pressed = true
 		pressed.emit()
 	if (event is InputEventMouseButton && event.is_released()):

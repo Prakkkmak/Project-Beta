@@ -4,7 +4,7 @@ class_name Quest
 signal progressed
 signal completed
 
-@export var text: String
+@export_multiline var text: String
 @export var max_value: int
 
 
