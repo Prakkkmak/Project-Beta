@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=15 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
 [ext_resource type="PackedScene" uid="uid://b64hh2ju2u6yq" path="res://threshold/threshold_manager/threshold_manager.tscn" id="2_va2w2"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://ci06ve3ifsx7d" path="res://assets/sprites/press_here.png" id="9_hisgl"]
 [ext_resource type="Texture2D" uid="uid://dhk8v8ce7nipd" path="res://assets/sprites/do_not_touch.png" id="10_rricq"]
 [ext_resource type="Texture2D" uid="uid://bli6rf6r06pfm" path="res://assets/sprites/trash.png" id="11_acek8"]
+[ext_resource type="Texture2D" uid="uid://b4w6ein6jq85n" path="res://entities/physical_button/main_button/the_button_bottom.png" id="13_c6v8k"]
+[ext_resource type="Texture2D" uid="uid://c7t6ykkwckxwi" path="res://entities/physical_button/main_button/the_button_top.png" id="14_kkbd8"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
@@ -38,7 +40,7 @@ horizontal_alignment = 1
 [node name="MainButton" parent="." instance=ExtResource("4_ebyq7")]
 unique_name_in_owner = true
 position = Vector2(8, 24)
-initial_cooldown = 1.0
+initial_cooldown = 0.1
 
 [node name="GiveUpButton" parent="." instance=ExtResource("5_ynr3d")]
 unique_name_in_owner = true
@@ -58,3 +60,11 @@ texture = ExtResource("10_rricq")
 [node name="Trash" type="Sprite2D" parent="."]
 position = Vector2(-1062, 551)
 texture = ExtResource("11_acek8")
+
+[node name="TheButtonBottom" type="Sprite2D" parent="."]
+position = Vector2(-1000, 24)
+texture = ExtResource("13_c6v8k")
+
+[node name="TheButtonTop" type="Sprite2D" parent="."]
+position = Vector2(-1000, -80)
+texture = ExtResource("14_kkbd8")
