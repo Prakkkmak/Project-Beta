@@ -20,6 +20,7 @@ normal_texture = ExtResource("3_a8v8l")
 pressed_texture = ExtResource("4_ykwct")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, 10)
 texture = ExtResource("3_a8v8l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

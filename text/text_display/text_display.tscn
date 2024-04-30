@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bafsrbfcjpeww"]
+
+[ext_resource type="Script" path="res://text/text_display/text_display.gd" id="1_7fmed"]
+
+[node name="TextDisplay" type="Marker2D"]
+position = Vector2(0, 256)
+script = ExtResource("1_7fmed")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -56.0
+offset_top = -16.0
+offset_right = 69.0
+offset_bottom = 7.0
+text = "Message de test"

@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8oqjxtilsryl"]
-
-[ext_resource type="Script" path="res://threshold/handlers/quest_threshold_handler/quest_threshold_handler.gd" id="1_o7un8"]
-
-[node name="QuestThresholdHandler" type="Node"]
-script = ExtResource("1_o7un8")

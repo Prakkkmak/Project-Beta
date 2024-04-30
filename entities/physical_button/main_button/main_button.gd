@@ -16,6 +16,7 @@ func _ready() -> void:
 	clickable_component.released.connect(_on_released)
 	cooldown_timer.timeout.connect(_on_cooldown_timer_timeout)
 	cooldown_timer.wait_time = cooldown
+	GlobalEvents.threshold_triggered.connect(_on_threshold_triggered)
 
 
 func _on_pressed() -> void:
@@ -30,3 +31,7 @@ func _on_released() -> void:
 func _on_cooldown_timer_timeout() -> void:
 	print("timeout")
 	clickable_component.enabled = true
+
+
+func _on_threshold_triggered(event_treshold: EventThreshold) -> void:
+	pass
