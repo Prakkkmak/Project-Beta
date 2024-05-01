@@ -6,4 +6,4 @@
 script = ExtResource("1_6v2th")
 to_enable_list = Array[String](["trash_bin"])
 to_disable_list = Array[String]([])
-score = 220
+score = 250

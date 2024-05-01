@@ -12,4 +12,4 @@ max_value = 25
 [resource]
 script = ExtResource("2_l20n0")
 quest = SubResource("Resource_5ns36")
-score = 154
+score = 174

@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_weyrf")
 texts = Array[String](["Super important", "A 518 Surtout ne touche pas le bouton", "Retiens bien, 518: TOUCHE A RIEN"])
-score = 62
+score = 60

@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_bf61e")
-texts = Array[String](["Super !", "Tu vas penser que je te prends pour un con.", "Mais ...", "S'il te plait..", "Peut tu atteindre 500?"])
+texts = Array[String](["Wow, tu es toujours là ?", "Clique jusque 500 et je te révèlerai le sens de la vie.", "Spoiler: C'est peut être juste de continuer de cliquer."])
 score = 300

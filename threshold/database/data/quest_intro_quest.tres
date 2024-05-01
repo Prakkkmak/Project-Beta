@@ -5,10 +5,11 @@
 
 [sub_resource type="Resource" id="Resource_5ns36"]
 script = ExtResource("1_tx0yj")
-text = "Appuie sur le bouton 50 fois."
-max_value = 50
+id = ""
+text = "Appuie sur le bouton 100 fois."
+max_value = 100
 
 [resource]
 script = ExtResource("1_bvgdb")
 quest = SubResource("Resource_5ns36")
-score = 20
+score = 25

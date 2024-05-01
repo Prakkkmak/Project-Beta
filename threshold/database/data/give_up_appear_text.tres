@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_c3crc")
-texts = Array[String](["Tu vois ce bouton qui est apparu ?", "Ignore le, ça met fin à ton travail.", "Tu ne veux gâcher tout ce que tu as produit pour l'instant, hein ?"])
-score = 110
+texts = Array[String](["Tu vois ce bouton en bas à droite ?", "N'y touche surtout pas !"])
+score = 150

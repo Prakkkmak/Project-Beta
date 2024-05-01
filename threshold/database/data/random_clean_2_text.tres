@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_tor3a")
-texts = Array[String](["J'ai trouvé", "Je t'apporte une poubelle."])
-score = 210
+texts = Array[String](["Bonnes nouvelles !", "Je t'apporte une poubelle. Tu vas pouvoir faire du tri !"])
+score = 250

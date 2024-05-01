@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_5p38y")
-texts = Array[String](["Raaah.. ", "Comment tout ce bordel arrive ?", "Il faut nettoyer tout ça.", "Continue comme ça,  je vais trouver une solution !"])
-score = 160
+texts = Array[String](["Ça devient le bordel par ici.", "Je vais chercher une solution.", "Toi, continue de cliquer !"])
+score = 200
