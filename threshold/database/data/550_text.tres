@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://8oocts0noah7"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_xfiei"]
+
+[resource]
+script = ExtResource("1_xfiei")
+texts = Array[String](["Je vois que tu es toujours là.", "Pour te féliciter de ta persévérence je vais to'ffrire quelque chose : tu peux maintenant allumer et éteindre la lumière. ", "Génial non ?"])
+score = 550

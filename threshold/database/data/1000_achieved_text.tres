@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://2l5wlkikpcsd"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_s1ll6"]
+
+[resource]
+script = ExtResource("1_s1ll6")
+texts = Array[String](["Maintenant que tu es arrivé jusque là tu peux aller jusque 1000 non ? Je te promet une super récompense !"])
+score = 800

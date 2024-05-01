@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://bod87hub73vj6"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_vkwim"]
+
+[resource]
+script = ExtResource("1_vkwim")
+texts = Array[String](["Tu sais que ça fait déjà plusieurs minutes que tu ne fais qu'activer un boutton ?", "Il y a plus productif dans la vie.", "Tu peux toujours abandonner.", "C'est facile, tu as juste a cliquer sur le boutton rouge. Et ça je sais que tu sais le faire."])
+score = 650

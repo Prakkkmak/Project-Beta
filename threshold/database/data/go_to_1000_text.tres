@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://bil0vsbkhv20s"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_bbsyd"]
+
+[resource]
+script = ExtResource("1_bbsyd")
+texts = Array[String](["Wow ça se fête !", "Pour la peine, le conteur va s'augmenter tout seul pendant 30 secondes.", "Tu n'as rien a faire ! Tu peux te reposer."])
+score = 1000
