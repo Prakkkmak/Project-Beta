@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cp5f3qdwi01fb"
+
+[deps]
+
+files=["res://ButtonGameText - Feuille 1.en.translation", "res://ButtonGameText - Feuille 1.fr.translation"]
+
+source_file="res://ButtonGameText - Feuille 1.csv"
+dest_files=["res://ButtonGameText - Feuille 1.en.translation", "res://ButtonGameText - Feuille 1.fr.translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -63,6 +63,10 @@ button={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://ButtonGameText - Feuille 1.en.translation", "res://ButtonGameText - Feuille 1.fr.translation")
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.611765, 0.780392, 0.741176, 1)

@@ -81,3 +81,19 @@ position = Vector2(-1062, 551)
 texture = ExtResource("11_acek8")
 
 [node name="Node2D" type="Node2D" parent="."]
+
+[node name="FrenchButton" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = -1117.0
+offset_top = -456.0
+offset_right = -1044.0
+offset_bottom = -425.0
+text = "Français"
+
+[node name="EnglishButton" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = -1113.0
+offset_top = -516.0
+offset_right = -1050.0
+offset_bottom = -485.0
+text = "English"
