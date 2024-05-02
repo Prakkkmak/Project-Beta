@@ -42,6 +42,7 @@ scale = Vector2(1.2, 1.2)
 
 [node name="TextDisplay" parent="." instance=ExtResource("7_hvn1e")]
 position = Vector2(2, 372)
+time_per_character = 0.07
 
 [node name="ScoreDisplay" type="Marker2D" parent="."]
 position = Vector2(126, 42)
@@ -53,6 +54,7 @@ offset_top = -641.0
 offset_right = -60.0
 offset_bottom = -599.0
 theme = ExtResource("7_cmwxi")
+theme_override_colors/font_color = Color(0.219608, 0.227451, 0.239216, 1)
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 
@@ -88,7 +90,7 @@ offset_left = -1117.0
 offset_top = -456.0
 offset_right = -1044.0
 offset_bottom = -425.0
-text = "FRENCH"
+text = "Français"
 
 [node name="EnglishButton" type="Button" parent="."]
 unique_name_in_owner = true
@@ -96,4 +98,4 @@ offset_left = -1113.0
 offset_top = -516.0
 offset_right = -1050.0
 offset_bottom = -485.0
-text = "ENGLISH"
+text = "English"

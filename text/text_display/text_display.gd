@@ -2,7 +2,7 @@ extends Marker2D
 
 
 @export var texts_to_diplay: Array[String] = []
-
+@export var time_per_character: float = 0.05
 
 @onready var label: Label = %Label
 @onready var timer: Timer = %Timer
@@ -33,6 +33,8 @@ func display_text(text: String) -> void:
 	print("Display " + text)
 	text_displayed = true
 	label.text = text
+	timer.wait_time = tr(text).length() * 0.07
+	print("Timer time : " + str(timer.wait_time))
 	animation_player.play(ANIM_FADE_IN_NAME)
 
 
