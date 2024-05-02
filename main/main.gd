@@ -29,13 +29,6 @@ func _on_give_up_button_pressed() -> void:
 
 func _on_french_button_pressed() -> void:
 	TranslationServer.set_locale("fr")
-	print("fr")
-	updateUI()
 
 func _on_english_button_pressed() -> void:
 	TranslationServer.set_locale("en")
-	print("en")
-	updateUI()
-
-func updateUI() -> void:
-	pass

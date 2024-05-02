@@ -22,7 +22,7 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if (event is InputEventMouseButton && event.is_released()):
+	if (event is InputEventMouseButton && event.is_released() && drag):
 		drag = false
 		var areas: Array[Area2D] = get_overlapping_areas()
 		for area: Area2D in areas:
@@ -50,7 +50,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		var parent: Node = owner.get_parent()
 		parent.remove_child(owner)
 		parent.add_child(owner)
-	get_viewport().set_input_as_handled()
+		get_viewport().set_input_as_handled()
 
 
 

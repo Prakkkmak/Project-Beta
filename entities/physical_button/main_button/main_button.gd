@@ -32,6 +32,7 @@ func _on_pressed() -> void:
 		cooldown_timer.start()
 
 func _on_released() -> void:
+	print("released")
 	animation_player.play("release")
 	released.emit()
 

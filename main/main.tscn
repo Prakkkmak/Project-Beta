@@ -42,13 +42,13 @@ position = Vector2(-400, -168)
 scale = Vector2(1.2, 1.2)
 
 [node name="QuestSpawn" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
-position = Vector2(-280, 255)
+position = Vector2(-274.286, 177.143)
 
 [node name="QuestSpawn2" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
-position = Vector2(793.333, -126.667)
+position = Vector2(720, -114.286)
 
 [node name="QuestSpawn3" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
-position = Vector2(-180, -290)
+position = Vector2(-371.429, -200)
 
 [node name="QuestSpawn4" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
 position = Vector2(335, -179.167)
