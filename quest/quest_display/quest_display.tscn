@@ -98,6 +98,8 @@ script = ExtResource("1_t31qd")
 
 [node name="DragArea" parent="." node_paths=PackedStringArray("dragged_node") instance=ExtResource("3_gkgat")]
 unique_name_in_owner = true
+collision_layer = 16
+collision_mask = 8
 dragged_node = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragArea"]

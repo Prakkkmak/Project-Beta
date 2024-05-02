@@ -18,8 +18,6 @@ func _ready() -> void:
 		return
 	give_up_button.released.connect(_on_give_up_button_pressed)
 	Score.change_score(starting_score)
-	french_button.pressed.connect(_on_french_button_pressed)
-	english_button.pressed.connect(_on_english_button_pressed)
 
 
 func _on_give_up_button_pressed() -> void:

@@ -13,10 +13,12 @@ const MARK_DONE: String = "mark_done"
 @onready var quest_label: Label = %QuestLabel
 @onready var quest_progress_bar: ProgressBar = %QuestProgressBar
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var drag_area: DragArea = %DragArea
 
 
-func _init() -> void:
+func _ready() -> void:
 	update_display()
+	drag_area.dropped_in_trash.connect(_on_dropped_in_trash)
 
 
 func assign_quest(init_quest: Quest) -> void:
@@ -45,7 +47,7 @@ func mark_done() -> void:
 	animation_player.play(MARK_DONE)
 
 
-func remove_display() -> void:
+func remove() -> void:
 	animation_player.play(POP_OUT)
 	animation_player.animation_finished.connect(_on_animation_remove_finished)
 
@@ -60,5 +62,10 @@ func _on_quest_progressed() -> void:
 
 func _on_quest_completed() -> void:
 	mark_done()
+
+
+func _on_dropped_in_trash(trash_bin: TrashBin) -> void:
+	trash_bin.throw_animation()
+	remove()
 
 

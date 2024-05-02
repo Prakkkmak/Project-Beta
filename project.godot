@@ -67,6 +67,14 @@ button={
 
 locale/translations=PackedStringArray("res://translations/translation.en.translation", "res://translations/translation.fr.translation")
 
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="button"
+2d_physics/layer_3="drag"
+2d_physics/layer_4="trash"
+2d_physics/layer_5="deletable"
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.611765, 0.780392, 0.741176, 1)

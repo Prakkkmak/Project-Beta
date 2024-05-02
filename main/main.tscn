@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://klwiyubnjp81" path="res://quest/quest_generator/quest_spawn/quest_spawn.tscn" id="9_5d5qc"]
 [ext_resource type="Texture2D" uid="uid://ci06ve3ifsx7d" path="res://assets/sprites/press_here.png" id="9_hisgl"]
 [ext_resource type="Texture2D" uid="uid://dhk8v8ce7nipd" path="res://assets/sprites/do_not_touch.png" id="10_rricq"]
-[ext_resource type="Texture2D" uid="uid://bli6rf6r06pfm" path="res://assets/sprites/trash.png" id="11_acek8"]
+[ext_resource type="PackedScene" uid="uid://bcewgla26q03o" path="res://trash_bin/trash_bin.tscn" id="15_7xb80"]
 
 [sub_resource type="Resource" id="Resource_tuyrp"]
 script = ExtResource("5_p8u7o")
@@ -28,14 +28,13 @@ script = ExtResource("1_5dvk3")
 [node name="ThresholdManager" parent="." instance=ExtResource("2_va2w2")]
 event_thresholds = ExtResource("3_vhixw")
 
-[node name="FeatureEnabler" parent="." node_paths=PackedStringArray("main_button", "main_button_indicator", "give_up_button", "give_up_button_indicator", "score_display", "trash_bin") instance=ExtResource("4_p8rg2")]
+[node name="FeatureEnabler" parent="." node_paths=PackedStringArray("main_button", "main_button_indicator", "give_up_button", "give_up_button_indicator", "score_display") instance=ExtResource("4_p8rg2")]
 base_feature_enabler = SubResource("Resource_tuyrp")
 main_button = NodePath("../MainButton")
 main_button_indicator = NodePath("../PressHere")
 give_up_button = NodePath("../GiveUpButton")
 give_up_button_indicator = NodePath("../DoNotTouch")
 score_display = NodePath("../ScoreDisplay")
-trash_bin = NodePath("../Trash")
 
 [node name="QuestGenerator" parent="." instance=ExtResource("6_m3cg2")]
 position = Vector2(-400, -168)
@@ -94,24 +93,5 @@ texture = ExtResource("9_hisgl")
 position = Vector2(875, 347)
 texture = ExtResource("10_rricq")
 
-[node name="Trash" type="Sprite2D" parent="."]
-position = Vector2(-1062, 551)
-texture = ExtResource("11_acek8")
-
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="FrenchButton" type="Button" parent="."]
-unique_name_in_owner = true
-offset_left = -1117.0
-offset_top = -456.0
-offset_right = -1044.0
-offset_bottom = -425.0
-text = "Français"
-
-[node name="EnglishButton" type="Button" parent="."]
-unique_name_in_owner = true
-offset_left = -1113.0
-offset_top = -516.0
-offset_right = -1050.0
-offset_bottom = -485.0
-text = "English"
+[node name="Trash" parent="." instance=ExtResource("15_7xb80")]
+position = Vector2(-968, 568)

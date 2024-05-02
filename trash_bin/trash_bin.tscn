@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcewgla26q03o"]
+
+[ext_resource type="Script" path="res://trash_bin/trash_bin.gd" id="1_3thi2"]
+[ext_resource type="Texture2D" uid="uid://bli6rf6r06pfm" path="res://assets/sprites/trash.png" id="1_d351c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpmx2"]
+size = Vector2(376.5, 160)
+
+[sub_resource type="Animation" id="Animation_3104c"]
+resource_name = "throw"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.4, 1.4), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_66u4p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rnoob"]
+_data = {
+"RESET": SubResource("Animation_66u4p"),
+"throw": SubResource("Animation_3104c")
+}
+
+[node name="TrashBin" type="Area2D"]
+collision_layer = 8
+collision_mask = 16
+script = ExtResource("1_3thi2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_d351c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bpmx2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_rnoob")
+}
