@@ -12,9 +12,6 @@ extends Node
 @onready var give_up_button: GiveUpButton = %GiveUpButton
 @onready var quest_generator: QuestGenerator = $QuestGenerator
 
-var languageNames:Array = ["English", "Français"]
-var languageCodes:Array = ["en","fr"]
-
 
 func _ready() -> void:
 	if !give_up_button:

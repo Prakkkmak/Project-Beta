@@ -65,7 +65,7 @@ button={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://ButtonGameText - Feuille 1.en.translation", "res://ButtonGameText - Feuille 1.fr.translation")
+locale/translations=PackedStringArray("res://translations/translation.en.translation", "res://translations/translation.fr.translation")
 
 [rendering]
 
