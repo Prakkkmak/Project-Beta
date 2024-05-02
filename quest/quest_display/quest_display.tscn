@@ -135,8 +135,6 @@ libraries = {
 "": SubResource("AnimationLibrary_to7ww")
 }
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="MarkDoneSprite" type="Sprite2D" parent="."]
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("5_notoc")

@@ -16,6 +16,11 @@ func _ready() -> void:
 	input_event.connect(_on_input_event)
 
 
+func _input(event: InputEvent) -> void:
+	if (event is InputEventMouseButton && event.is_released()):
+		drag = false
+		get_viewport().set_input_as_handled()
+
 func _process(delta: float) -> void:
 	if drag:
 		dragged_node.global_position = get_global_mouse_position() + drag_delta
@@ -33,5 +38,8 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if (event is InputEventMouseButton && event.is_pressed()):
 		drag = true
 		drag_delta = dragged_node.global_position - get_global_mouse_position()
-	if (event is InputEventMouseButton && event.is_released()):
-		drag = false
+		var parent: Node = owner.get_parent()
+		parent.remove_child(owner)
+		parent.add_child(owner)
+	
+	get_viewport().set_input_as_handled()

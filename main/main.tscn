@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=17 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
 [ext_resource type="PackedScene" uid="uid://b64hh2ju2u6yq" path="res://threshold/threshold_manager/threshold_manager.tscn" id="2_va2w2"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cq2ovr1h4v737" path="res://quest/quest_generator/quest_generator.tscn" id="6_m3cg2"]
 [ext_resource type="Theme" uid="uid://cxo3ge4duc5lx" path="res://theme/theme.tres" id="7_cmwxi"]
 [ext_resource type="PackedScene" uid="uid://bafsrbfcjpeww" path="res://text/text_display/text_display.tscn" id="7_hvn1e"]
+[ext_resource type="PackedScene" uid="uid://klwiyubnjp81" path="res://quest/quest_generator/quest_spawn/quest_spawn.tscn" id="9_5d5qc"]
 [ext_resource type="Texture2D" uid="uid://ci06ve3ifsx7d" path="res://assets/sprites/press_here.png" id="9_hisgl"]
 [ext_resource type="Texture2D" uid="uid://dhk8v8ce7nipd" path="res://assets/sprites/do_not_touch.png" id="10_rricq"]
 [ext_resource type="Texture2D" uid="uid://bli6rf6r06pfm" path="res://assets/sprites/trash.png" id="11_acek8"]
@@ -39,6 +40,21 @@ trash_bin = NodePath("../Trash")
 [node name="QuestGenerator" parent="." instance=ExtResource("6_m3cg2")]
 position = Vector2(-400, -168)
 scale = Vector2(1.2, 1.2)
+
+[node name="QuestSpawn" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
+position = Vector2(-280, 255)
+
+[node name="QuestSpawn2" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
+position = Vector2(793.333, -126.667)
+
+[node name="QuestSpawn3" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
+position = Vector2(-180, -290)
+
+[node name="QuestSpawn4" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
+position = Vector2(326.667, -360)
+
+[node name="QuestSpawn5" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
+position = Vector2(613.333, 353.333)
 
 [node name="TextDisplay" parent="." instance=ExtResource("7_hvn1e")]
 position = Vector2(2, 372)
