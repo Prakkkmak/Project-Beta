@@ -5,7 +5,7 @@ extends Node
 @export_range(0,1000) var starting_score: int = 0
 
 @export var forbidden_scores: Array[int] = [518, 1222, 2148, 5123, 5134]
-@export var wait_time_secondes: float = 10
+@export var wait_time_seconds: float = 10
 @export var broken_time_secondes: float = 120
 
 @onready var french_button: Button = %FrenchButton
@@ -40,7 +40,8 @@ func _on_english_button_pressed() -> void:
 
 func _on_score_changed(old_score: int, new_score: int) -> void:
 	if forbidden_scores.find(new_score) >= 0:
-		get_tree().create_timer(broken_time_secondes).timeout.connect(_on_wait_button_timer_timeout.bind(new_score))
+		print("Forbidden")
+		get_tree().create_timer(wait_time_seconds).timeout.connect(_on_wait_button_timer_timeout.bind(new_score))
 	if forbidden_scores.find(old_score) >= 0:
 		main_button.broke_button()
 		GlobalEvents.send_messages([
