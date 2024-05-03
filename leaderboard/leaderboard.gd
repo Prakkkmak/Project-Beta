@@ -21,11 +21,17 @@ func load_leaderboard() -> void:
 	http_request_get_leaderboard.request(BASE_URL + "/leaderboard")
 	http_request_get_leaderboard.request_completed.connect(_on_request_completed)
 
-func push_new_score(username: String, score: int) -> void:
+func push_new_score(score: int, username: String = "") -> void:
+	if !username:
+		username = current_name
 	var body: String  = JSON.new().stringify({"username": username, "score": score})
 	http_request_post_score.request(BASE_URL + "/submit-score", [], HTTPClient.METHOD_POST, body)
 	# Update the signal connection for the response
 	http_request_post_score.request_completed.connect(_on_score_submitted)
+
+func set_current_name(new_name: String) -> void:
+	current_name = new_name
+
 
 func _on_score_submitted(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
 	# Handle the response, then reload the leaderboard
