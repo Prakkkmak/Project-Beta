@@ -1,5 +1,65 @@
-key,en,fr
-ENGLISH,"English","Anglais"
-FRENCH,"French","Français"
-HELLO_1,"Well done ! You understand the game.","Bien joué ! Tu as compris le jeu."
-HELLO_2,"It's fun, isn't it?","C'est fun non ?"
+,en,fr
+HELLO_TXT_0,Well done ! You understand the game.,Bien joué ! Tu as compris le jeu.
+HELLO_TXT_1,HELLO_TXT_1,C'est fun non ?
+QUEST_INTRO_TXT,"Oh, you received a quest. I wonder what happens if you finish it.","Oh, tu as reçu une quête. Je me demande ce qu'il se passe si tu la termine."
+QUEST_INTRO_QST,"Press the button 100 times.
+",Appuie sur le bouton 100 fois.
+FIRST_QUEST_ACHIEVED_TXT_1,"WELL DONE ! You are able to follow simple instructions.
+",BRAVO ! Tu es capable de suivre des instructions simples.
+FIRST_QUEST_ACHIEVED_TXT_2,"As a reward, I now let you see your score
+","En récompense, je te laisse maintenant voir ton score"
+FIRST_QUEST_ACHIEVED_TXT_3,"Great, right?",Génial non ?
+RANDOM_QUEST_TXT_1,bg@aa.com,bg@aa.com
+STOP_AT_518_TXT_1,Super important,Super important
+STOP_AT_518_TXT_2,At 518 don't touch the button,A 518 surtout ne touche pas le bouton
+STOP_AT_518_TXT_3,"Hold on tight. 518: DON’T TOUCH ANYTHING
+",Retiens bien. 518 : NE TOUCHE A RIEN
+518_QST,"Do not press the button for 10 seconds!
+",N'appuis pas sur le bouton pendant 10 secondes !
+300_TXT_1,"Wow, you're still here!","Wow, tu es toujours là !"
+300_TXT_2,Go to 500 and I will reveal to you the meaning of life.,Vas jusque 500 et je te révèlerai le sens de la vie.
+300_TXT_3,"Spoiler: Maybe it's just keep clicking.
+",Spoiler: C'est peut être juste de continuer de cliquer.
+GO_TO_500_QST,Reache 500 points,Atteindre 500 points
+500_TXT_1,Good job ! You've won...,Bravo ! Tu as gagné...
+500_TXT_2,"The right to continue pressing this button.
+",Le droit de continuer d'appuyer sur ce bouton.
+500_TXT_3,Unless you want to give up already.,A moins que tu ne veuilles déjà abandonner.
+550_TXT_1,"I see you're still here.
+",Je vois que tu es toujours là.
+550_TXT_2,"To congratulate you on your perseverance I will offer you something: you can now turn the light on and off.
+",Pour te féliciter de ta persévérance je vais t'offrir quelque chose : tu peux maintenant allumer et éteindre la lumière.
+550_TXT_3,"Brilliant, right?
+",Génial non ?
+650_TXT_1,"Do you know that it's already been several minutes since you just pressed a button?
+",Tu sais que ça fait déjà plusieurs minutes que tu ne fais qu'activer un bouton ?
+650_TXT_2,There are more productive things.,Il y a plus productif dans la vie.
+650_TXT_3,You can always give up.,Tu peux toujours abandonner.
+650_TXT_4,"It's easy, you just have to click on the red button. And I know you know how to do that.","C'est facile, tu as juste a cliquer sur le boutton rouge. Et ça je sais que tu sais le faire."
+GO_TO_1000_TXT,"Now that you've gotten this far you can go up to 1000 right? I promise you a great reward!
+",Maintenant que tu es arrivé jusque là tu peux aller jusque 1000 non ? Je te promet une super récompense !
+1000_TXT_1,"Wow, it’s worth celebrating!
+",Wow ça se fête !
+1000_TXT_2,"For your trouble, I'm offering you a new button that will allow your score to increase on its own.","Pour la peine, je t'offre un nouveau bouton qui permettra à ton score d'augmenter tout seul"
+1000_TXT_3,That way you can rest.,Tu pourras te reposer comme ça.
+RDM_QST_1,You should give up,Tu devrais abandonner
+RDM_QST_2,"Click on the red button and give up
+",Clique sur le bouton rouge et abandonne
+RDM_QST_3,#NAME?,#NAME?
+RDM_QST_4,Xoxo,Xoxo
+RDM_QST_5,Just give up,Abandonne
+RDM_QST_6,Great quest,Super quête
+CLEAN_TXT_1,"It's getting messy around here.
+",Ça devient le bordel par ici.
+CLEAN_TXT_2,"I will look for a solution.
+",Je vais chercher une solution.
+CLEAN_TXT_3,Keep clicking!,"Toi, continue de cliquer !"
+CLEAN_TXT_4,"Good news !
+",Bonnes nouvelles !
+CLEAN_TXT_5,"I'll bring you a trash can. You will be able to sort!
+",Je t'apporte une poubelle. Tu vas pouvoir faire du tri !
+GO_TO_1000_QST,Reache 1000 points,Atteindre 1000 points
+GIVE_UP_APPEAR_TXT_1,"See that button at the bottom right?
+",Tu vois ce bouton en bas à droite ?
+GIVE_UP_APPEAR_TXT_2,"Don't touch it!
+",N'y touche surtout pas !

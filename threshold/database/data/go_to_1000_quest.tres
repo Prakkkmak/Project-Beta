@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_5ns36"]
 script = ExtResource("1_1tbl8")
 id = ""
-text = "Atteindre 1000 points"
+text = "GO_TO_1000_QST"
 max_value = 200
 
 [resource]

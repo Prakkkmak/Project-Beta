@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_7lxwy")
-texts = Array[String](["Tu vois ce bouton en bas à droite ?", "N'y touche surtout pas !"])
+texts = Array[String](["GIVE_UP_APPEAR_TXT_1", "GIVE_UP_APPEAR_TXT_2"])
 score = 150

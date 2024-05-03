@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_5ns36"]
 script = ExtResource("1_gmqe3")
 id = ""
-text = "bg@aa.com"
+text = "RANDOM_QUEST_TXT_1"
 max_value = 25
 
 [resource]

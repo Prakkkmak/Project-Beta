@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_kfbbc")
-texts = Array[String](["Wow, tu es toujours là ?", "Clique jusque 500 et je te révèlerai le sens de la vie.", "Spoiler: C'est peut être juste de continuer de cliquer."])
+texts = Array[String](["300_TXT_1", "300_TXT_2", "300_TXT_3"])
 score = 300

@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_61pgk")
-texts = Array[String](["Bravo !", "Tu as gagné...", "Le droit de continuer de presser ce bouton."])
+texts = Array[String](["500_TXT_1", "500_TXT_2", "500_TXT_3"])
 score = 500

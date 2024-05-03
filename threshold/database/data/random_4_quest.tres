@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_5ns36"]
 script = ExtResource("1_rgdtj")
 id = ""
-text = "Xoxo"
+text = "RDM_QST_4"
 max_value = 0
 
 [resource]

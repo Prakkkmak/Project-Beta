@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_5ns36"]
 script = ExtResource("1_tx0yj")
 id = ""
-text = "Appuie sur le bouton 100 fois."
+text = "QUEST_INTRO_QST"
 max_value = 100
 
 [resource]

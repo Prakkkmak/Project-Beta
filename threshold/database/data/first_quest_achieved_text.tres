@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_7jw2v")
-texts = Array[String](["BRAVO ! Tu es capable de suivre des instructions.", "En récompense, je te laisse maintenant voir ton score", "Génial non ?"])
+texts = Array[String](["FIRST_QUEST_ACHIEVED_TXT_1", "FIRST_QUEST_ACHIEVED_TXT_2", "FIRST_QUEST_ACHIEVED_TXT_3"])
 score = 125

@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_s1ll6")
-texts = Array[String](["Maintenant que tu es arrivé jusque là tu peux aller jusque 1000 non ? Je te promet une super récompense !"])
-score = 800
+texts = Array[String](["1000_TXT_1", "1000_TXT_2", "1000_TXT_3"])
+score = 1000

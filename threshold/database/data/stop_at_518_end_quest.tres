@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_5ns36"]
 script = ExtResource("1_owie1")
 id = ""
-text = "Ne rien toucher pendant 10 secondes !"
+text = "518_QST"
 max_value = 0
 
 [resource]

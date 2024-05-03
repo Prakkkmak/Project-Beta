@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_xfiei")
-texts = Array[String](["Je vois que tu es toujours là.", "Pour te féliciter de ta persévérence je vais to'ffrire quelque chose : tu peux maintenant allumer et éteindre la lumière. ", "Génial non ?"])
+texts = Array[String](["550_TXT_1", "550_TXT_2", "550_TXT_3"])
 score = 550

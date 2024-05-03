@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_5ns36"]
 script = ExtResource("1_u2omu")
 id = ""
-text = "Atteint 500 points"
+text = "GO_TO_500_QST"
 max_value = 200
 
 [resource]

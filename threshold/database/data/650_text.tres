@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_vkwim")
-texts = Array[String](["Tu sais que ça fait déjà plusieurs minutes que tu ne fais qu'activer un boutton ?", "Il y a plus productif dans la vie.", "Tu peux toujours abandonner.", "C'est facile, tu as juste a cliquer sur le boutton rouge. Et ça je sais que tu sais le faire."])
+texts = Array[String](["650_TXT_1", "650_TXT_2", "650_TXT_3", "650_TXT_4"])
 score = 650
