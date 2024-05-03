@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://fv1ot0ihjx1o"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/text_event_threshold.gd" id="1_61pgk"]
+
+[resource]
+script = ExtResource("1_61pgk")
+texts = Array[String](["Bravo !", "Tu as gagné...", "Le droit de continuer de presser ce bouton."])
+score = 500
