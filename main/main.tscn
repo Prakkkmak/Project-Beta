@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=27 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
 [ext_resource type="PackedScene" uid="uid://b64hh2ju2u6yq" path="res://threshold/threshold_manager/threshold_manager.tscn" id="2_va2w2"]
@@ -23,9 +23,122 @@ to_enable_list = Array[String](["main_button", "main_button_indicator"])
 to_disable_list = Array[String]([])
 score = 0
 
+[sub_resource type="Gradient" id="Gradient_gt6pi"]
+offsets = PackedFloat32Array(0.0034965, 0.0454545)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0732a"]
+gradient = SubResource("Gradient_gt6pi")
+
+[sub_resource type="Gradient" id="Gradient_kkjqx"]
+offsets = PackedFloat32Array(0, 0.646853)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kbo5w"]
+gradient = SubResource("Gradient_kkjqx")
+width = 254
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_c8tjo"]
+offsets = PackedFloat32Array(0, 0.685315)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b1x3b"]
+gradient = SubResource("Gradient_c8tjo")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Animation" id="Animation_pgub1"]
+resource_name = "light_off"
+length = 10.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shadow:enabled")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.71, 0.8, 1.61, 1.64, 1.95, 2, 2.08, 2.16, 2.47),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextLight:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.58, 3.02, 4.02, 4.06, 4.11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torch:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.73, 4.98, 5.02, 8.81),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.2, 0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_6w8n4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextLight:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torch:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o4m67"]
+_data = {
+"RESET": SubResource("Animation_6w8n4"),
+"light_off": SubResource("Animation_pgub1")
+}
+
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
 starting_score = 515
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1280.0
+offset_top = -936.0
+offset_right = -1280.0
+offset_bottom = -936.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.18618, 2.84496)
+mouse_filter = 2
+color = Color(0.611765, 0.780392, 0.741176, 1)
 
 [node name="ThresholdManager" parent="." instance=ExtResource("2_va2w2")]
 event_thresholds = ExtResource("3_vhixw")
@@ -59,10 +172,6 @@ position = Vector2(335, -179.167)
 [node name="QuestSpawn5" parent="QuestGenerator" instance=ExtResource("9_5d5qc")]
 position = Vector2(613.333, 353.333)
 
-[node name="TextDisplay" parent="." instance=ExtResource("7_hvn1e")]
-position = Vector2(2, 372)
-time_per_character = 0.07
-
 [node name="NameField" parent="." instance=ExtResource("9_kedi5")]
 position = Vector2(0, 600)
 
@@ -80,6 +189,11 @@ theme_override_colors/font_color = Color(0.219608, 0.227451, 0.239216, 1)
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 
+[node name="TextDisplay" parent="." instance=ExtResource("7_hvn1e")]
+light_mask = 2
+z_index = 9
+time_per_character = 0.07
+
 [node name="MainButton" parent="." instance=ExtResource("4_ebyq7")]
 unique_name_in_owner = true
 position = Vector2(8, 24)
@@ -87,6 +201,7 @@ initial_cooldown = 0.1
 
 [node name="GiveUpButton" parent="." instance=ExtResource("5_ynr3d")]
 unique_name_in_owner = true
+light_mask = 3
 position = Vector2(1030, 523)
 
 [node name="MainCamera" type="Camera2D" parent="."]
@@ -102,3 +217,28 @@ texture = ExtResource("10_rricq")
 
 [node name="Trash" parent="." instance=ExtResource("15_7xb80")]
 position = Vector2(-968, 568)
+
+[node name="Shadow" type="PointLight2D" parent="."]
+position = Vector2(-8, 168)
+enabled = false
+blend_mode = 1
+texture = SubResource("GradientTexture2D_0732a")
+texture_scale = 50.0
+
+[node name="TextLight" type="PointLight2D" parent="."]
+position = Vector2(0, 328)
+energy = 0.0
+texture = SubResource("GradientTexture2D_kbo5w")
+texture_scale = 5.0
+
+[node name="Torch" type="PointLight2D" parent="."]
+position = Vector2(-336, -256)
+energy = 0.0
+texture = SubResource("GradientTexture2D_b1x3b")
+texture_scale = 5.0
+
+[node name="LightAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o4m67")
+}
+autoplay = "light_off"

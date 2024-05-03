@@ -118,7 +118,7 @@ _data = {
 }
 
 [node name="QuestDisplay" type="Node2D"]
-z_index = 1
+z_index = 10
 script = ExtResource("1_t31qd")
 
 [node name="DragArea" parent="." node_paths=PackedStringArray("dragged_node") instance=ExtResource("3_gkgat")]

@@ -4,6 +4,7 @@ extends Node
 @export_file("*.tscn") var end_screen_file_path: String = "res://screens/end_screen/end_screen.tscn"
 @export_range(0,1000) var starting_score: int = 0
 
+
 @export var forbidden_scores: Array[int] = [518, 1222, 2148, 5123, 5134]
 @export var wait_time_seconds: float = 10
 @export var broken_time_secondes: float = 120
@@ -15,6 +16,7 @@ extends Node
 @onready var give_up_button: GiveUpButton = %GiveUpButton
 @onready var quest_generator: QuestGenerator = $QuestGenerator
 
+@onready var torch: PointLight2D = $Torch
 
 func _ready() -> void:
 	if !give_up_button:
@@ -23,6 +25,9 @@ func _ready() -> void:
 	Score.changed.connect(_on_score_changed)
 	Score.set_score(starting_score)
 
+
+func _process(delta: float) -> void:
+	torch.global_position = torch.get_global_mouse_position()
 
 func _on_give_up_button_pressed() -> void:
 	if !end_screen_file_path:
