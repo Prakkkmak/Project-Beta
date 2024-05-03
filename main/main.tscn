@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bafsrbfcjpeww" path="res://text/text_display/text_display.tscn" id="7_hvn1e"]
 [ext_resource type="PackedScene" uid="uid://klwiyubnjp81" path="res://quest/quest_generator/quest_spawn/quest_spawn.tscn" id="9_5d5qc"]
 [ext_resource type="Texture2D" uid="uid://ci06ve3ifsx7d" path="res://assets/sprites/press_here.png" id="9_hisgl"]
+[ext_resource type="PackedScene" uid="uid://cpckiyu6adpmr" path="res://leaderboard/name_field/name_field.tscn" id="9_kedi5"]
 [ext_resource type="Texture2D" uid="uid://dhk8v8ce7nipd" path="res://assets/sprites/do_not_touch.png" id="10_rricq"]
 [ext_resource type="PackedScene" uid="uid://bcewgla26q03o" path="res://trash_bin/trash_bin.tscn" id="15_7xb80"]
 
@@ -21,9 +22,6 @@ script = ExtResource("5_p8u7o")
 to_enable_list = Array[String](["main_button", "main_button_indicator"])
 to_disable_list = Array[String]([])
 score = 0
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_krfsu"]
-polygon = PackedVector2Array(-1184, -664, 1224, -688, 1192, 832, -1200, 736)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
@@ -64,6 +62,9 @@ position = Vector2(613.333, 353.333)
 position = Vector2(2, 372)
 time_per_character = 0.07
 
+[node name="TextField" parent="." instance=ExtResource("9_kedi5")]
+position = Vector2(0, 600)
+
 [node name="ScoreDisplay" type="Marker2D" parent="."]
 position = Vector2(126, 42)
 
@@ -101,5 +102,4 @@ texture = ExtResource("10_rricq")
 [node name="Trash" parent="." instance=ExtResource("15_7xb80")]
 position = Vector2(-968, 568)
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_krfsu")
+[node name="CanvasModulate" type="CanvasModulate" parent="."]

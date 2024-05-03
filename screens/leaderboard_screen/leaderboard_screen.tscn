@@ -7,8 +7,6 @@
 script = ExtResource("1_qtv5c")
 player_score_scene = ExtResource("2_ytt2c")
 
-[node name="HTTPRequest" type="HTTPRequest" parent="."]
-
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0

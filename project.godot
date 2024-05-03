@@ -29,6 +29,7 @@ config/icon="res://icon.svg"
 
 Score="*res://score/score.gd"
 GlobalEvents="*res://global_events/global_events.gd"
+Leaderboard="*res://leaderboard/leaderboard.tscn"
 
 [debug]
 

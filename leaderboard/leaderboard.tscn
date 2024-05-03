@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4hpvdpa218hb"]
+
+[ext_resource type="Script" path="res://leaderboard/leaderboard.gd" id="1_ugikh"]
+
+[node name="Leaderboard" type="Node"]
+script = ExtResource("1_ugikh")
+
+[node name="HTTPRequestPostScore" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequestGetLeaderboard" type="HTTPRequest" parent="."]
