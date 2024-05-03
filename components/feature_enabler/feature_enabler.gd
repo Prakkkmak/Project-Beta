@@ -10,6 +10,7 @@ extends Node
 @export var give_up_button_indicator: Node2D
 @export var score_display: Node2D
 @export var trash_bin: Node2D
+@export var name_field: Node2D
 @export var light: Node2D
 
 @onready var appear_audio_stream_player: AudioStreamPlayer2D = $AppearAudioStreamPlayer
@@ -23,6 +24,7 @@ extends Node
 	"score_display": score_display,
 	"trash_bin": trash_bin,
 	"light": light,
+	"name_field": name_field
 }
 
 

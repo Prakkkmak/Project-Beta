@@ -30,7 +30,7 @@ starting_score = 515
 [node name="ThresholdManager" parent="." instance=ExtResource("2_va2w2")]
 event_thresholds = ExtResource("3_vhixw")
 
-[node name="FeatureEnabler" parent="." node_paths=PackedStringArray("main_button", "main_button_indicator", "give_up_button", "give_up_button_indicator", "score_display", "trash_bin") instance=ExtResource("4_p8rg2")]
+[node name="FeatureEnabler" parent="." node_paths=PackedStringArray("main_button", "main_button_indicator", "give_up_button", "give_up_button_indicator", "score_display", "trash_bin", "name_field") instance=ExtResource("4_p8rg2")]
 base_feature_enabler = SubResource("Resource_tuyrp")
 main_button = NodePath("../MainButton")
 main_button_indicator = NodePath("../PressHere")
@@ -38,6 +38,7 @@ give_up_button = NodePath("../GiveUpButton")
 give_up_button_indicator = NodePath("../DoNotTouch")
 score_display = NodePath("../ScoreDisplay")
 trash_bin = NodePath("../Trash")
+name_field = NodePath("../NameField")
 
 [node name="QuestGenerator" parent="." instance=ExtResource("6_m3cg2")]
 position = Vector2(-400, -168)
@@ -62,7 +63,7 @@ position = Vector2(613.333, 353.333)
 position = Vector2(2, 372)
 time_per_character = 0.07
 
-[node name="TextField" parent="." instance=ExtResource("9_kedi5")]
+[node name="NameField" parent="." instance=ExtResource("9_kedi5")]
 position = Vector2(0, 600)
 
 [node name="ScoreDisplay" type="Marker2D" parent="."]
@@ -101,5 +102,3 @@ texture = ExtResource("10_rricq")
 
 [node name="Trash" parent="." instance=ExtResource("15_7xb80")]
 position = Vector2(-968, 568)
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
