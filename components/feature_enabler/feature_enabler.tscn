@@ -4,3 +4,5 @@
 
 [node name="FeatureEnabler" type="Node"]
 script = ExtResource("1_uypc1")
+
+[node name="AppearAudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]

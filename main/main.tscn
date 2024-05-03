@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=18 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
 [ext_resource type="PackedScene" uid="uid://b64hh2ju2u6yq" path="res://threshold/threshold_manager/threshold_manager.tscn" id="2_va2w2"]
@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://cpvtsjqkikvrc" path="res://threshold/database/all_thresholds.tres" id="3_vhixw"]
 [ext_resource type="PackedScene" uid="uid://d4m6l6ww8tqs4" path="res://entities/physical_button/main_button/main_button.tscn" id="4_ebyq7"]
 [ext_resource type="PackedScene" uid="uid://dhqv30wesm0cj" path="res://components/feature_enabler/feature_enabler.tscn" id="4_p8rg2"]
-[ext_resource type="Script" path="res://threshold/event_threshold/FeatureEnablerThreshold.gd" id="5_p8u7o"]
+[ext_resource type="Script" path="res://threshold/event_threshold/feature_enabler_threshold.gd" id="5_p8u7o"]
 [ext_resource type="PackedScene" uid="uid://cqeo47q3m23dd" path="res://entities/physical_button/give_up_button/give_up_button.tscn" id="5_ynr3d"]
 [ext_resource type="PackedScene" uid="uid://cq2ovr1h4v737" path="res://quest/quest_generator/quest_generator.tscn" id="6_m3cg2"]
 [ext_resource type="Theme" uid="uid://cxo3ge4duc5lx" path="res://theme/theme.tres" id="7_cmwxi"]
@@ -22,8 +22,12 @@ to_enable_list = Array[String](["main_button", "main_button_indicator"])
 to_disable_list = Array[String]([])
 score = 0
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_krfsu"]
+polygon = PackedVector2Array(-1184, -664, 1224, -688, 1192, 832, -1200, 736)
+
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
+starting_score = 515
 
 [node name="ThresholdManager" parent="." instance=ExtResource("2_va2w2")]
 event_thresholds = ExtResource("3_vhixw")
@@ -96,3 +100,6 @@ texture = ExtResource("10_rricq")
 
 [node name="Trash" parent="." instance=ExtResource("15_7xb80")]
 position = Vector2(-968, 568)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_krfsu")

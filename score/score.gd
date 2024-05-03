@@ -13,6 +13,8 @@ func change_score(delta: int = 1) -> void:
 	score += delta
 	changed.emit(score - delta, score)
 
+func set_score(new_score: int) -> void:
+	score = new_score
 
 func _on_main_button_released() -> void:
 	change_score(1)

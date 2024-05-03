@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://btn0sfaa1gb2x"]
 
-[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_bf61e"]
+[ext_resource type="Script" path="res://threshold/event_threshold/text_event_threshold.gd" id="1_kfbbc"]
 
 [resource]
-script = ExtResource("1_bf61e")
+script = ExtResource("1_kfbbc")
 texts = Array[String](["Wow, tu es toujours là ?", "Clique jusque 500 et je te révèlerai le sens de la vie.", "Spoiler: C'est peut être juste de continuer de cliquer."])
 score = 300

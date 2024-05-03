@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://2l5wlkikpcsd"]
 
-[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_s1ll6"]
+[ext_resource type="Script" path="res://threshold/event_threshold/text_event_threshold.gd" id="1_s1ll6"]
 
 [resource]
 script = ExtResource("1_s1ll6")

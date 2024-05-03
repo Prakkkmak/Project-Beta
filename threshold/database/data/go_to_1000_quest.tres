@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuestEventThreshold" load_steps=4 format=3 uid="uid://bnkeliewtjjtc"]
 
 [ext_resource type="Script" path="res://quest/quest_display/quest.gd" id="1_1tbl8"]
-[ext_resource type="Script" path="res://threshold/event_threshold/QuestEventThreshold.gd" id="2_tujjn"]
+[ext_resource type="Script" path="res://threshold/event_threshold/quest_event_threshold.gd" id="2_tj5ck"]
 
 [sub_resource type="Resource" id="Resource_5ns36"]
 script = ExtResource("1_1tbl8")
@@ -10,6 +10,6 @@ text = "Atteindre 1000 points"
 max_value = 200
 
 [resource]
-script = ExtResource("2_tujjn")
+script = ExtResource("2_tj5ck")
 quest = SubResource("Resource_5ns36")
 score = 800

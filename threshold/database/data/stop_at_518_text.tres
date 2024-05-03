@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://stuwytac31ut"]
 
-[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_weyrf"]
+[ext_resource type="Script" path="res://threshold/event_threshold/text_event_threshold.gd" id="1_jt86c"]
 
 [resource]
-script = ExtResource("1_weyrf")
+script = ExtResource("1_jt86c")
 texts = Array[String](["Super important", "A 518 Surtout ne touche pas le bouton", "Retiens bien, 518: TOUCHE A RIEN"])
 score = 60

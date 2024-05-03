@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="FeatureEnablerThreshold" load_steps=2 format=3 uid="uid://de506wfh2oasm"]
 
-[ext_resource type="Script" path="res://threshold/event_threshold/FeatureEnablerThreshold.gd" id="1_he12p"]
+[ext_resource type="Script" path="res://threshold/event_threshold/feature_enabler_threshold.gd" id="1_he12p"]
 
 [resource]
 script = ExtResource("1_he12p")

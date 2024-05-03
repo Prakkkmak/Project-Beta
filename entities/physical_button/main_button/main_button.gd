@@ -7,12 +7,13 @@ signal released
 
 @export var initial_cooldown: float = 0.5
 
+
 @onready var clickable_component: ClickableComponent = $ClickableComponent
 @onready var cooldown_timer: Timer = $CooldownTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var cooldown_enabled: bool = true
-
+var _broken_button: bool = false
 
 func _ready() -> void:
 	clickable_component.pressed.connect(_on_pressed)
@@ -23,7 +24,21 @@ func _ready() -> void:
 	GlobalEvents.threshold_triggered.connect(_on_threshold_triggered)
 
 
+func broke_button() -> void:
+	_broken_button = true
+
+
+func repair_button() -> void:
+	_broken_button = false
+
+
+func is_broken_button() -> bool:
+	return _broken_button
+
+
 func _on_pressed() -> void:
+	if _broken_button:
+		return
 	Score.change_score(1)
 	pressed.emit()
 	animation_player.play("press")
@@ -32,7 +47,8 @@ func _on_pressed() -> void:
 		cooldown_timer.start()
 
 func _on_released() -> void:
-	print("released")
+	if _broken_button:
+		return
 	animation_player.play("release")
 	released.emit()
 

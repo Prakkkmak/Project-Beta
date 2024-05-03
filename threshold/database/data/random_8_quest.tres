@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuestEventThreshold" load_steps=4 format=3 uid="uid://doiqjp5ereqca"]
 
 [ext_resource type="Script" path="res://quest/quest_display/quest.gd" id="1_d4p5k"]
-[ext_resource type="Script" path="res://threshold/event_threshold/QuestEventThreshold.gd" id="2_dblnb"]
+[ext_resource type="Script" path="res://threshold/event_threshold/quest_event_threshold.gd" id="2_miqp0"]
 
 [sub_resource type="Resource" id="Resource_5ns36"]
 script = ExtResource("1_d4p5k")
@@ -10,6 +10,6 @@ text = "bg@aa.com"
 max_value = 25
 
 [resource]
-script = ExtResource("2_dblnb")
+script = ExtResource("2_miqp0")
 quest = SubResource("Resource_5ns36")
 score = 199

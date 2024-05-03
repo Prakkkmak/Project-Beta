@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://0rmbxxxqsfwb"]
 
-[ext_resource type="Script" path="res://threshold/event_threshold/TextEventThreshold.gd" id="1_tor3a"]
+[ext_resource type="Script" path="res://threshold/event_threshold/text_event_threshold.gd" id="1_7pvpp"]
 
 [resource]
-script = ExtResource("1_tor3a")
+script = ExtResource("1_7pvpp")
 texts = Array[String](["Bonnes nouvelles !", "Je t'apporte une poubelle. Tu vas pouvoir faire du tri !"])
 score = 250
