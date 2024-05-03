@@ -16,7 +16,7 @@ extends Node
 @onready var give_up_button: GiveUpButton = %GiveUpButton
 @onready var quest_generator: QuestGenerator = $QuestGenerator
 
-@onready var torch: PointLight2D = $Torch
+@onready var torch: PointLight2D = %Torch
 
 func _ready() -> void:
 	if !give_up_button:

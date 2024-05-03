@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceklo2bp8r1cc"]
+
+[ext_resource type="Script" path="res://components/loght_manager/light_manager.gd" id="1_ppit6"]
+
+[node name="LightManager" type="Node"]
+script = ExtResource("1_ppit6")

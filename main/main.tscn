@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b56hrpj2ihat8"]
+[gd_scene load_steps=31 format=3 uid="uid://b56hrpj2ihat8"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
 [ext_resource type="PackedScene" uid="uid://b64hh2ju2u6yq" path="res://threshold/threshold_manager/threshold_manager.tscn" id="2_va2w2"]
@@ -8,9 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://dhqv30wesm0cj" path="res://components/feature_enabler/feature_enabler.tscn" id="4_p8rg2"]
 [ext_resource type="Script" path="res://threshold/event_threshold/feature_enabler_threshold.gd" id="5_p8u7o"]
 [ext_resource type="PackedScene" uid="uid://cqeo47q3m23dd" path="res://entities/physical_button/give_up_button/give_up_button.tscn" id="5_ynr3d"]
+[ext_resource type="PackedScene" uid="uid://ceklo2bp8r1cc" path="res://components/loght_manager/light_manager.tscn" id="6_fpbo1"]
 [ext_resource type="PackedScene" uid="uid://cq2ovr1h4v737" path="res://quest/quest_generator/quest_generator.tscn" id="6_m3cg2"]
+[ext_resource type="Texture2D" uid="uid://b6c8t88t0sd72" path="res://assets/sprites/light_button.png" id="7_1qkkv"]
 [ext_resource type="Theme" uid="uid://cxo3ge4duc5lx" path="res://theme/theme.tres" id="7_cmwxi"]
 [ext_resource type="PackedScene" uid="uid://bafsrbfcjpeww" path="res://text/text_display/text_display.tscn" id="7_hvn1e"]
+[ext_resource type="Texture2D" uid="uid://calw14gj1y0vb" path="res://assets/sprites/light_button_pressed.png" id="8_lxf2t"]
 [ext_resource type="PackedScene" uid="uid://klwiyubnjp81" path="res://quest/quest_generator/quest_spawn/quest_spawn.tscn" id="9_5d5qc"]
 [ext_resource type="Texture2D" uid="uid://ci06ve3ifsx7d" path="res://assets/sprites/press_here.png" id="9_hisgl"]
 [ext_resource type="PackedScene" uid="uid://cpckiyu6adpmr" path="res://leaderboard/name_field/name_field.tscn" id="9_kedi5"]
@@ -48,53 +51,12 @@ gradient = SubResource("Gradient_c8tjo")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[sub_resource type="Animation" id="Animation_pgub1"]
-resource_name = "light_off"
-length = 10.0
-step = 0.01
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Shadow:enabled")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.71, 0.8, 1.61, 1.64, 1.95, 2, 2.08, 2.16, 2.47),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [false, true, false, true, false, true, false, true, false, true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TextLight:energy")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.58, 3.02, 4.02, 4.06, 4.11),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 1.0, 1.0, 0.0, 1.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Torch:energy")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 4.73, 4.98, 5.02, 8.81),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.2, 0.0, 1.0]
-}
-
 [sub_resource type="Animation" id="Animation_6w8n4"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextLight:energy")
+tracks/0/path = NodePath("LightManager/TextLight:energy")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -106,7 +68,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Torch:energy")
+tracks/1/path = NodePath("LightManager/Torch:energy")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -115,16 +77,121 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightManager/Shadow:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_pgub1"]
+resource_name = "light_off"
+length = 10.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LightManager/Shadow:enabled")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.71, 0.8, 1.61, 1.64, 1.95, 2, 2.08, 2.16, 2.47),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LightManager/TextLight:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.58, 3.02, 4.02, 4.06, 4.11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightManager/Torch:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.73, 4.98, 5.02, 8.81),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.2, 0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_a6kh2"]
+resource_name = "light_on"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LightManager/Shadow:enabled")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LightManager/TextLight:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.6, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightManager/Torch:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LightManager/Shadow:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.4, 3.88),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o4m67"]
 _data = {
 "RESET": SubResource("Animation_6w8n4"),
-"light_off": SubResource("Animation_pgub1")
+"light_off": SubResource("Animation_pgub1"),
+"light_on": SubResource("Animation_a6kh2")
 }
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
-starting_score = 515
 
 [node name="Background" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -152,6 +219,89 @@ give_up_button_indicator = NodePath("../DoNotTouch")
 score_display = NodePath("../ScoreDisplay")
 trash_bin = NodePath("../Trash")
 name_field = NodePath("../NameField")
+
+[node name="LightManager" parent="." node_paths=PackedStringArray("buttons") instance=ExtResource("6_fpbo1")]
+buttons = [NodePath("LightButton1"), NodePath("LightButton2"), NodePath("LightButton3")]
+
+[node name="Shadow" type="PointLight2D" parent="LightManager"]
+unique_name_in_owner = true
+position = Vector2(286, 332)
+enabled = false
+blend_mode = 1
+texture = SubResource("GradientTexture2D_0732a")
+texture_scale = 50.0
+
+[node name="TextLight" type="PointLight2D" parent="LightManager"]
+unique_name_in_owner = true
+position = Vector2(0, 328)
+energy = 0.0
+texture = SubResource("GradientTexture2D_kbo5w")
+texture_scale = 5.0
+
+[node name="Torch" type="PointLight2D" parent="LightManager"]
+unique_name_in_owner = true
+position = Vector2(-1504, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_b1x3b")
+texture_scale = 5.0
+
+[node name="LightAnimationPlayer" type="AnimationPlayer" parent="LightManager"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_o4m67")
+}
+
+[node name="LightButton1" type="TextureButton" parent="LightManager"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1605.0
+offset_top = -868.0
+offset_right = -1514.0
+offset_bottom = -774.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("7_1qkkv")
+texture_pressed = ExtResource("8_lxf2t")
+
+[node name="LightButton2" type="TextureButton" parent="LightManager"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -459.0
+offset_right = 1.0
+offset_bottom = -365.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("7_1qkkv")
+texture_pressed = ExtResource("8_lxf2t")
+
+[node name="LightButton3" type="TextureButton" parent="LightManager"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1344.0
+offset_top = 225.0
+offset_right = -1253.0
+offset_bottom = 319.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("7_1qkkv")
+texture_pressed = ExtResource("8_lxf2t")
 
 [node name="QuestGenerator" parent="." instance=ExtResource("6_m3cg2")]
 position = Vector2(-400, -168)
@@ -217,28 +367,3 @@ texture = ExtResource("10_rricq")
 
 [node name="Trash" parent="." instance=ExtResource("15_7xb80")]
 position = Vector2(-968, 568)
-
-[node name="Shadow" type="PointLight2D" parent="."]
-position = Vector2(-8, 168)
-enabled = false
-blend_mode = 1
-texture = SubResource("GradientTexture2D_0732a")
-texture_scale = 50.0
-
-[node name="TextLight" type="PointLight2D" parent="."]
-position = Vector2(0, 328)
-energy = 0.0
-texture = SubResource("GradientTexture2D_kbo5w")
-texture_scale = 5.0
-
-[node name="Torch" type="PointLight2D" parent="."]
-position = Vector2(-336, -256)
-energy = 0.0
-texture = SubResource("GradientTexture2D_b1x3b")
-texture_scale = 5.0
-
-[node name="LightAnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_o4m67")
-}
-autoplay = "light_off"
