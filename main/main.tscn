@@ -192,6 +192,21 @@ _data = {
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
+starting_score = 1000
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2990.0
+offset_top = -2296.0
+offset_right = -2990.0
+offset_bottom = -2296.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+mouse_filter = 2
+color = Color(0.611765, 0.780392, 0.741176, 1)
 
 [node name="ThresholdManager" parent="." instance=ExtResource("2_va2w2")]
 event_thresholds = ExtResource("3_vhixw")
