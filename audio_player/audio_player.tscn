@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://audio_player/audio_player.gd" id="1_6fxsj"]
 [ext_resource type="AudioStream" uid="uid://dawyaqa30kb24" path="res://assets/sound/lo-fi.mp3" id="1_ubug4"]
-[ext_resource type="Texture2D" uid="uid://bi0gf5ysp1im7" path="res://assets/sprites/light_off.png" id="2_uodv7"]
-[ext_resource type="Texture2D" uid="uid://c3h7r26tj34s5" path="res://assets/sprites/light_on.png" id="3_7sipy"]
+[ext_resource type="Texture2D" uid="uid://c2l12fhokgdq1" path="res://assets/sprites/sound_on_button.png" id="2_v0ikr"]
+[ext_resource type="Texture2D" uid="uid://b30vvmxsoe1oh" path="res://assets/sprites/sound_off_button.png" id="3_cfxrf"]
 
 [node name="AudioPlayer" type="Marker2D"]
 script = ExtResource("1_6fxsj")
@@ -13,8 +13,8 @@ unique_name_in_owner = true
 offset_right = 40.0
 offset_bottom = 40.0
 toggle_mode = true
-texture_normal = ExtResource("2_uodv7")
-texture_pressed = ExtResource("3_7sipy")
+texture_normal = ExtResource("2_v0ikr")
+texture_pressed = ExtResource("3_cfxrf")
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true

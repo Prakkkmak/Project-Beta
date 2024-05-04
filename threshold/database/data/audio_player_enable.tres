@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FeatureEnablerThreshold" load_steps=2 format=3 uid="uid://cq3r8iw88y7j4"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/feature_enabler_threshold.gd" id="1_trwvm"]
+
+[resource]
+script = ExtResource("1_trwvm")
+to_enable_list = Array[String](["audio_player"])
+to_disable_list = Array[String]([])
+score = 450

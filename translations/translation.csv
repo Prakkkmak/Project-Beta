@@ -140,3 +140,9 @@ LIGHT_BUTTTON_PRESSED_TXT_3,You are able ton continue.,Tu vas pouvoir continuer 
 ,,
 20000_TXT,"You are definitely crazy.
 ",Tu es définitivement fou. 
+,,
+NAME_FIELD_TXT,"Just one thing. If you ever want to leave a mark somewhere, write your name in this area that has just appeared.","Juste une chose. Si jamais tu veux laisser une trace quelque part, écris ton nom dans cette zone qui vient d'apparaitre."
+,,
+AUDIO_PLAYER_TXT_1,"It's a little too quiet around here, isn't it?
+",C'est un peu trop calme par ici non ?
+AUDIO_PLAYER_TXT_2,"I'll play some music for you, but you can turn it off if you prefer this heavy silence.","Je te mets un peu de musique, mais tu peux la désactiver si tu préfères ce silence pesant."

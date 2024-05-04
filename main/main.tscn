@@ -333,7 +333,7 @@ time_per_character = 0.07
 position = Vector2(988, -566)
 
 [node name="AudioPlayer" parent="." instance=ExtResource("13_7bkuw")]
-position = Vector2(-1085, 48)
+position = Vector2(960, -503)
 
 [node name="ScoreDisplay" type="Marker2D" parent="."]
 position = Vector2(126, 42)
