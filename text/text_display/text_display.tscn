@@ -66,9 +66,8 @@ offset_left = -543.0
 offset_top = 19.0
 offset_right = 543.0
 offset_bottom = 124.0
-theme_override_colors/font_color = Color(0.600474, 0.680465, 0.493161, 1)
+theme_override_colors/font_color = Color(0.2, 0.239216, 0.145098, 1)
 theme_override_font_sizes/font_size = 50
-text = "Test de text placeholder"
 horizontal_alignment = 1
 autowrap_mode = 2
 

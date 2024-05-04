@@ -4,7 +4,6 @@ extends Node
 @export_file("*.tscn") var end_screen_file_path: String = "res://screens/end_screen/end_screen.tscn"
 @export_range(0,1000) var starting_score: int = 0
 
-
 @export var forbidden_scores: Array[int] = [518, 1222, 2148, 5123, 5134]
 @export var wait_time_seconds: float = 10
 @export var broken_time_secondes: float = 120
@@ -26,9 +25,6 @@ func _ready() -> void:
 	Score.set_score(starting_score)
 
 
-func _process(delta: float) -> void:
-	torch.global_position = torch.get_global_mouse_position()
-
 func _on_give_up_button_pressed() -> void:
 	if !end_screen_file_path:
 		push_warning("No end screen file path set")
@@ -45,7 +41,6 @@ func _on_english_button_pressed() -> void:
 
 func _on_score_changed(old_score: int, new_score: int) -> void:
 	if forbidden_scores.find(new_score) >= 0:
-		print("Forbidden")
 		get_tree().create_timer(wait_time_seconds).timeout.connect(_on_wait_button_timer_timeout.bind(new_score))
 	if forbidden_scores.find(old_score) >= 0:
 		main_button.broke_button()

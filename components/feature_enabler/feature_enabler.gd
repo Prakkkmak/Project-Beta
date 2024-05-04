@@ -11,7 +11,6 @@ extends Node
 @export var score_display: Node2D
 @export var trash_bin: Node2D
 @export var name_field: Node2D
-@export var light: Node2D
 
 @onready var appear_audio_stream_player: AudioStreamPlayer2D = $AppearAudioStreamPlayer
 
@@ -23,7 +22,6 @@ extends Node
 	"give_up_button_indicator": give_up_button_indicator,
 	"score_display": score_display,
 	"trash_bin": trash_bin,
-	"light": light,
 	"name_field": name_field
 }
 
@@ -65,9 +63,11 @@ func show_element(node: Node2D) -> void:
 	appear_audio_stream_player.global_position = node.global_position
 	appear_audio_stream_player.play()
 
+
 func _on_threshold_triggered(event_treshold: EventThreshold) -> void:
 	if !(event_treshold is FeatureEnablerThreshold):
 		return
 	var feature_enabler_threshold: FeatureEnablerThreshold = event_treshold as FeatureEnablerThreshold
 	enable_features(feature_enabler_threshold)
-	
+
+
