@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_s1ll6")
-texts = Array[String](["1000_TXT_1", "1000_TXT_2", "1000_TXT_3"])
+texts = Array[String](["1000_TXT_1", "1000_TXT_2"])
 score = 1000

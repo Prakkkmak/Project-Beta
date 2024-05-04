@@ -22,19 +22,20 @@ func spawn_buttons() -> void:
 		button.show()
 		button.pressed.connect(_on_light_button_pressed)
 	GlobalEvents.send_messages([
-		"C'est bon c'est réussi !",
-		"Pour remettre le courant, il y a quelques boutons à trouver."
+		"SPAWN_BUTTON_LIGHT_TXT_1",
+		"SPAWN_BUTTON_LIGHT_TXT_2"
 	])
 
 
 func switch_off_lights() -> void:
 	light_animation_player.play("light_off")
 	GlobalEvents.send_messages([
-		"On a un petit problème technique..",
-		"Merde !",
-		"Foutue lumière...",
-		"J'ai réussi à mettre le courant de secours",
-		"Je vais tenter de trouver une solution..."
+		"SWITCH_OFF_LIGHT_TXT_1",
+		"SWITCH_OFF_LIGHT_TXT_2",
+		"SWITCH_OFF_LIGHT_TXT_3",
+		"SWITCH_OFF_LIGHT_TXT_4",
+		"SWITCH_OFF_LIGHT_TXT_5",
+		"SWITCH_OFF_LIGHT_TXT_6"
 	])
 
 
@@ -53,9 +54,9 @@ func _on_light_button_pressed() -> void:
 	if all_pressed:
 		light_animation_player.play("light_on")
 		GlobalEvents.send_messages([
-			"Bien joué !",
-			"                                       ",
-			"Tu vas pouvoir continuer à cliquer sur le bouton.",
+			"LIGHT_BUTTTON_PRESSED_TXT_1",
+			"LIGHT_BUTTTON_PRESSED_TXT_2",
+			"LIGHT_BUTTTON_PRESSED_TXT_3",
 		])
 		for button: TextureButton in buttons:
 			button.hide()

@@ -27,10 +27,7 @@ GO_TO_500_QST,Reache 500 points,Atteindre 500 points
 500_TXT_3,Unless you want to give up already.,A moins que tu ne veuilles déjà abandonner.
 550_TXT_1,"I see you're still here.
 ",Je vois que tu es toujours là.
-550_TXT_2,"To congratulate you on your perseverance I will offer you something: you can now turn the light on and off.
-",Pour te féliciter de ta persévérance je vais t'offrir quelque chose : tu peux maintenant allumer et éteindre la lumière.
-550_TXT_3,"Brilliant, right?
-",Génial non ?
+550_TXT_2,"Well done, you are perseverant. Keep it up!",Bravo tu es persévérant. Continue comme ça !
 650_TXT_1,"Do you know that it's already been several minutes since you just pressed a button?
 ",Tu sais que ça fait déjà plusieurs minutes que tu ne fais qu'activer un bouton ?
 650_TXT_2,There are more productive things.,Il y a plus productif dans la vie.
@@ -40,8 +37,7 @@ GO_TO_1000_TXT,"Now that you've gotten this far you can go up to 1000 right? I p
 ",Maintenant que tu es arrivé jusque là tu peux aller jusque 1000 non ? Je te promet une super récompense !
 1000_TXT_1,"Wow, it’s worth celebrating!
 ",Wow ça se fête !
-1000_TXT_2,"For your trouble, I'm offering you a new button that will allow your score to increase on its own.","Pour la peine, je t'offre un nouveau bouton qui permettra à ton score d'augmenter tout seul"
-1000_TXT_3,That way you can rest.,Tu pourras te reposer comme ça.
+1000_TXT_2,"Just keep going a little longer, while I prepare a little surprise for you!","Continue juste un peu plus, le temps que je te prépare une petite surprise !"
 RDM_QST_1,You should give up,Tu devrais abandonner
 RDM_QST_2,"Click on the red button and give up
 ",Clique sur le bouton rouge et abandonne
@@ -63,3 +59,84 @@ GIVE_UP_APPEAR_TXT_1,"See that button at the bottom right?
 ",Tu vois ce bouton en bas à droite ?
 GIVE_UP_APPEAR_TXT_2,"Don't touch it!
 ",N'y touche surtout pas !
+4444_TXT,"""They call me mad. All artists are mad.""","« On me dit fou, mais quel artiste ne l'est pas ? »"
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+PLEASE_STOP_TXT_1,NOOOOO !,NOOON !
+PLEASE_STOP_TXT_2,"I told you to stop there.
+",Je t'avais dis de t'arrêter là.
+PLEASE_STOP_TXT_3,"Now the button is broken...
+",Maintenant le bouton est cassé...
+PLEASE_STOP_TXT_4,"You'll have to wait a few minutes while I fix it.
+","Tu vas devoir attendre quelques minutes, le temps que je le répare.."
+PLEASE_STOP_TXT_SUCCESS_CONTINUE_1,"You can continue. We avoided disaster.
+",Tu peux continuer. On a évité la catastrophe.
+PLEASE_STOP_TXT_FAIL_CONTINUE_1,"So ! The button is repaired.
+",Voila ! Le bouton est réparé.
+PLEASE_STOP_TXT_FAIL_CONTINUE_2,"Tap it and it should come back!
+",Tapote le et ça devrait revenir !
+PLEASE_STOP_TXT_FAIL_CONTINUE_3,"Instructions are very important, don't forget it.","Les instructions sont très importantes, ne l'oublie pas."
+,,
+,,
+AUTO_INCREMENT_TXT_1,And Voilà! I found a great reward!,Et voilà ! J'ai trouvé une super récompense.
+AUTO_INCREMENT_TXT_2,"I'm going to automate your button presses for a short period of time.
+",Je vais automatiser tes appuis sur le bouton pendant une petite période.
+AUTO_INCREMENT_TXT_3,"Rest. Go get some coffee.
+",Repose-toi. Vas prendre un café.
+AUTO_INCREMENT_TXT_STOP_1,"It was cool, wasn't it?
+",C'était cool non ?
+AUTO_INCREMENT_TXT_STOP_2,"Well maybe a little slow, sorry, I'm new to this game.
+","Bon peut être un peu lent, désolé, je débute à ce jeu."
+AUTO_INCREMENT_TXT_STOP_3,"I'll do better next time!
+",Je ferais mieux la prochaine fois !
+,,
+SWITCH_OFF_LIGHT_TXT_1,"Uh oh... We have a little technical problem...
+",Oh oh... On a un petit problème technique..
+SWITCH_OFF_LIGHT_TXT_2,"Shit!
+",Merde !
+SWITCH_OFF_LIGHT_TXT_3,"Damn light...
+",Foutue lumière...
+SWITCH_OFF_LIGHT_TXT_4,"I managed to turn on the emergency power
+",J'ai réussi à mettre le courant de secours
+SWITCH_OFF_LIGHT_TXT_5,"I will try to find a solution...
+",Je vais tenter de trouver une solution...
+SWITCH_OFF_LIGHT_TXT_6,"Keep pressing.
+",Continue d'appuyer en attendant.
+SPAWN_BUTTON_LIGHT_TXT_1,"It's good I found!
+",C'est bon j'ai trouvé !
+SPAWN_BUTTON_LIGHT_TXT_2,"To turn the power back on, you'll have to find 3 buttons and press them.
+","Pour remettre le courant, tu vas devoir trouver 3 boutons et appuyer dessus.."
+LIGHT_BUTTTON_PRESSED_TXT_1,Well done!,Bien joué !
+LIGHT_BUTTTON_PRESSED_TXT_2,                                       ,                                       
+LIGHT_BUTTTON_PRESSED_TXT_3,You are able ton continue.,Tu vas pouvoir continuer normalement.
+,,
+1250_TXT_1,Unfortunately this is the end of the demo. You can give up here.,Malheureusement c'est la fin de la démo. Tu peux abandonner ici.
+1250_TXT_2,You can still continue to increase your score and show who is the strongest (or craziest).,Tu peux toujours continuer pour augmenter ton score et montrer qui est le plus fort (ou le plus fou).
+1250_TXT_3,"But there won't be much new after that.
+",Mais il n'y aura pas grand chose de nouveau après ça.
+,,
+2000_TXT,"Really, why do you keep going? Give up!","Vraiment, pourquoi tu continue ? Abandonne !"
+,,
+3500_TXT,"It’s no longer perseverance at this point!
+",Ce n'est plus de la persévérance à ce stade !
+,,
+5000_TXT_1,"I don't even know what to say anymore...
+",Je ne sais même plus quoi dire...
+5000_TXT_2,"Really, give up...
+","Vraiment, abandonne..."
+10000_TXT,"Do you really have nothing else to do? The abort button is right there.
+",Tu n'as vraiment rien d'autre à faire ? Le bouton pour abandonner est juste là.
+,,
+20000_TXT,"You are definitely crazy.
+",Tu es définitivement fou. 

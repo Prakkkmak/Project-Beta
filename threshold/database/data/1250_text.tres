@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextEventThreshold" load_steps=2 format=3 uid="uid://c3pwhq5j67ggg"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/text_event_threshold.gd" id="1_x2yjm"]
+
+[resource]
+script = ExtResource("1_x2yjm")
+texts = Array[String](["1250_TXT_1", "1250_TXT_2", "1250_TXT_3"])
+score = 1250
