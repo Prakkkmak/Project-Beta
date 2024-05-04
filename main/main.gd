@@ -27,6 +27,7 @@ func _on_give_up_button_pressed() -> void:
 	if !end_screen_file_path:
 		push_warning("No end screen file path set")
 		return
+	Leaderboard.push_new_score(Score.score)
 	get_tree().change_scene_to_file(end_screen_file_path)
 	
 
@@ -43,10 +44,10 @@ func _on_score_changed(old_score: int, new_score: int) -> void:
 	if forbidden_scores.find(old_score) >= 0:
 		main_button.broke_button()
 		GlobalEvents.send_messages([
-			"NOOON !",
-			"Je t'avais dis de t'arrêter là",
-			"Maintenant le bouton est cassé...",
-			"Tu vas devoir attendre quelques secondes avant que je le répare"
+			"PLEASE_STOP_TXT_1",
+			"PLEASE_STOP_TXT_2",
+			"PLEASE_STOP_TXT_3",
+			"PLEASE_STOP_TXT_4"
 		])
 		get_tree().create_timer(broken_time_secondes).timeout.connect(_on_broken_button_timer_timeout)
 
@@ -55,13 +56,13 @@ func _on_wait_button_timer_timeout(score_forbidden: int) -> void:
 	forbidden_scores.erase(score_forbidden)
 	if Score.score == score_forbidden:
 		GlobalEvents.send_messages([
-			"Tu peux continuer."
+			"PLEASE_STOP_TXT_SUCCESS_CONTINUE_1"
 		])
 
 func _on_broken_button_timer_timeout() -> void:
 	main_button.repair_button()
 	GlobalEvents.send_messages([
-			"Voila ! Le bouton est réparé.",
-			"Tapote le et ça devrais revenir !",
-			"Les instructions sont très importantes, ne l'oublie pas"
+			"PLEASE_STOP_TXT_FAIL_CONTINUE_1",
+			"PLEASE_STOP_TXT_FAIL_CONTINUE_2",
+			"PLEASE_STOP_TXT_FAIL_CONTINUE_3"
 		])

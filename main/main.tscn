@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://kqhkyopfp1xb"]
+[gd_scene load_steps=32 format=3 uid="uid://kqhkyopfp1xb"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5dvk3"]
 [ext_resource type="PackedScene" uid="uid://b64hh2ju2u6yq" path="res://threshold/threshold_manager/threshold_manager.tscn" id="2_va2w2"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ci06ve3ifsx7d" path="res://assets/sprites/press_here.png" id="9_hisgl"]
 [ext_resource type="PackedScene" uid="uid://cpckiyu6adpmr" path="res://leaderboard/name_field/name_field.tscn" id="9_kedi5"]
 [ext_resource type="Texture2D" uid="uid://dhk8v8ce7nipd" path="res://assets/sprites/do_not_touch.png" id="10_rricq"]
+[ext_resource type="PackedScene" uid="uid://b58qmumj17owe" path="res://audio_player/audio_player.tscn" id="13_7bkuw"]
 [ext_resource type="PackedScene" uid="uid://bcewgla26q03o" path="res://trash_bin/trash_bin.tscn" id="15_7xb80"]
 
 [sub_resource type="Resource" id="Resource_tuyrp"]
@@ -211,7 +212,7 @@ color = Color(0.611765, 0.780392, 0.741176, 1)
 [node name="ThresholdManager" parent="." instance=ExtResource("2_va2w2")]
 event_thresholds = ExtResource("3_vhixw")
 
-[node name="FeatureEnabler" parent="." node_paths=PackedStringArray("main_button", "main_button_indicator", "give_up_button", "give_up_button_indicator", "score_display", "trash_bin", "name_field") instance=ExtResource("4_p8rg2")]
+[node name="FeatureEnabler" parent="." node_paths=PackedStringArray("main_button", "main_button_indicator", "give_up_button", "give_up_button_indicator", "score_display", "trash_bin", "name_field", "audio_player") instance=ExtResource("4_p8rg2")]
 base_feature_enabler = SubResource("Resource_tuyrp")
 main_button = NodePath("../MainButton")
 main_button_indicator = NodePath("../PressHere")
@@ -220,6 +221,7 @@ give_up_button_indicator = NodePath("../DoNotTouch")
 score_display = NodePath("../ScoreDisplay")
 trash_bin = NodePath("../Trash")
 name_field = NodePath("../NameField")
+audio_player = NodePath("../AudioPlayer")
 
 [node name="LightManager" parent="." node_paths=PackedStringArray("buttons") instance=ExtResource("6_fpbo1")]
 buttons = [NodePath("LightButton1"), NodePath("LightButton2"), NodePath("LightButton3")]
@@ -329,6 +331,9 @@ time_per_character = 0.07
 
 [node name="NameField" parent="." instance=ExtResource("9_kedi5")]
 position = Vector2(0, 600)
+
+[node name="AudioPlayer" parent="." instance=ExtResource("13_7bkuw")]
+position = Vector2(-1085, 48)
 
 [node name="ScoreDisplay" type="Marker2D" parent="."]
 position = Vector2(126, 42)

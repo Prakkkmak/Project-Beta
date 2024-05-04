@@ -7,7 +7,6 @@ signal released
 
 @export var initial_cooldown: float = 0.5
 
-
 @onready var clickable_component: ClickableComponent = $ClickableComponent
 @onready var cooldown_timer: Timer = $CooldownTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -86,12 +85,17 @@ func _on_threshold_triggered(event_treshold: EventThreshold) -> void:
 		var custom_event_treshold: CustomEventThreshold = event_treshold as CustomEventThreshold
 		if custom_event_treshold.name == "auto_increment_enable":
 			GlobalEvents.send_messages([
-				"Je vois que tu en as marre..",
-				"Je te propose d'automatiser les appuis.",
-				"Vas donc prendre un café."
+				"AUTO_INCREMENT_TXT_1",
+				"AUTO_INCREMENT_TXT_2",
+				"AUTO_INCREMENT_TXT_3"
 			])
 			_auto_increment = true
 			auto_increment_timer.start()
 		if custom_event_treshold.name == "auto_increment_disable":
 			_auto_increment = false
+			GlobalEvents.send_messages([
+				"AUTO_INCREMENT_TXT_STOP_1",
+				"AUTO_INCREMENT_TXT_STOP_2",
+				"AUTO_INCREMENT_TXT_STOP_3"
+			])
 			auto_increment_timer.stop()
