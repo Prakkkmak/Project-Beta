@@ -49,7 +49,6 @@ func _on_score_changed(old_score: int, new_score: int) -> void:
 			"Tu vas devoir attendre quelques secondes avant que je le répare"
 		])
 		get_tree().create_timer(broken_time_secondes).timeout.connect(_on_broken_button_timer_timeout)
-	
 
 
 func _on_wait_button_timer_timeout(score_forbidden: int) -> void:

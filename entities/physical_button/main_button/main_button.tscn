@@ -190,3 +190,6 @@ bus = &"SFX"
 [node name="ReleaseAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_u8eio")
 bus = &"SFX"
+
+[node name="AutoIncrementTimer" type="Timer" parent="."]
+wait_time = 3.9

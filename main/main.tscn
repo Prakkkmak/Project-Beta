@@ -192,7 +192,7 @@ _data = {
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
-starting_score = 1110
+starting_score = 1500
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
