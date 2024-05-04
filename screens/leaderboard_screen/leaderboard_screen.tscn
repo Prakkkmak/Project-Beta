@@ -1,15 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://lk264msiyf18"]
+[gd_scene load_steps=6 format=3 uid="uid://lk264msiyf18"]
 
 [ext_resource type="Script" path="res://screens/leaderboard_screen/leaderboard_screen.gd" id="1_qtv5c"]
 [ext_resource type="PackedScene" uid="uid://omuui48sk7tt" path="res://screens/leaderboard_screen/player_score/player_score.tscn" id="2_ytt2c"]
+[ext_resource type="Texture2D" uid="uid://li8b4abidxae" path="res://assets/sprites/leaderboard_icon.png" id="3_l6wdn"]
+[ext_resource type="Texture2D" uid="uid://dtbjcpvv1dyf" path="res://assets/sprites/main_menu_button.png" id="3_rbyf6"]
+[ext_resource type="Texture2D" uid="uid://6tqot7d2t8ri" path="res://assets/sprites/main_menu_button_pressed.png" id="4_kcpyb"]
 
 [node name="LeaderboardScreen" type="CanvasLayer"]
 script = ExtResource("1_qtv5c")
 player_score_scene = ExtResource("2_ytt2c")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PanelContainer" type="Container" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -113.5
+offset_right = 113.5
+offset_bottom = 124.0
+grow_horizontal = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
@@ -18,6 +26,34 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ScoresContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_l6wdn")
+stretch_mode = 3
+
+[node name="ScoresContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="PlayerScore2" parent="PanelContainer/MarginContainer/VBoxContainer/ScoresContainer" instance=ExtResource("2_ytt2c")]
+layout_mode = 2
+
+[node name="PlayerScore3" parent="PanelContainer/MarginContainer/VBoxContainer/ScoresContainer" instance=ExtResource("2_ytt2c")]
+layout_mode = 2
+
+[node name="PlayerScore4" parent="PanelContainer/MarginContainer/VBoxContainer/ScoresContainer" instance=ExtResource("2_ytt2c")]
+layout_mode = 2
+
+[node name="MainMenuButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 483.0
+offset_top = 550.0
+offset_right = 690.0
+offset_bottom = 637.0
+size_flags_vertical = 8
+texture_normal = ExtResource("3_rbyf6")
+texture_pressed = ExtResource("4_kcpyb")
+texture_hover = ExtResource("3_rbyf6")
