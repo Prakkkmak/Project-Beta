@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://hafg0f424wlf"]
+[gd_scene load_steps=11 format=3 uid="uid://hafg0f424wlf"]
 
 [ext_resource type="Script" path="res://screens/title_screen/title_screen.gd" id="1_8snak"]
 [ext_resource type="Texture2D" uid="uid://cfmhoxhd2c1c8" path="res://assets/sprites/play button.png" id="2_olnvp"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cog7ymyqv36gt" path="res://assets/sprites/EN_button_pressed.png" id="7_37r30"]
 [ext_resource type="Texture2D" uid="uid://dkgaam1d1ulh7" path="res://assets/sprites/FR_button.png" id="8_qjes3"]
 [ext_resource type="Texture2D" uid="uid://d36ufyu51iblf" path="res://assets/sprites/FR_button_pressed.png" id="9_3a8h1"]
+[ext_resource type="AudioStream" uid="uid://dvysxx0jd5mcc" path="res://assets/sound/Peachtea - Somewhere in the Elevator.wav" id="10_7exmk"]
 
 [node name="TitleScreen" type="CanvasLayer"]
 script = ExtResource("1_8snak")
@@ -83,3 +84,7 @@ layout_mode = 2
 texture_normal = ExtResource("8_qjes3")
 texture_pressed = ExtResource("9_3a8h1")
 texture_hover = ExtResource("8_qjes3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_7exmk")
+autoplay = true
