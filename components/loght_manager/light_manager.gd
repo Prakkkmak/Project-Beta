@@ -13,6 +13,10 @@ func _ready() -> void:
 	GlobalEvents.threshold_triggered.connect(_on_threshold_triggered)
 
 
+func _process(delta: float) -> void:
+	torch.global_position = torch.get_global_mouse_position()
+
+
 func spawn_buttons() -> void:
 	for button: TextureButton in buttons:
 		button.show()

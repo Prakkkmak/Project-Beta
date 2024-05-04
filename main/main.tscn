@@ -192,7 +192,7 @@ _data = {
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
-starting_score = 1000
+starting_score = 1110
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -241,7 +241,7 @@ texture_scale = 5.0
 
 [node name="Torch" type="PointLight2D" parent="LightManager"]
 unique_name_in_owner = true
-position = Vector2(-1504, 1)
+position = Vector2(-394, 4)
 energy = 0.0
 texture = SubResource("GradientTexture2D_b1x3b")
 texture_scale = 5.0

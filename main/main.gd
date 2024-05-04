@@ -2,7 +2,7 @@ class_name Main
 extends Node
 
 @export_file("*.tscn") var end_screen_file_path: String = "res://screens/end_screen/end_screen.tscn"
-@export_range(0,1000) var starting_score: int = 0
+@export_range(0,10000) var starting_score: int = 0
 
 @export var forbidden_scores: Array[int] = [518, 1222, 2148, 5123, 5134]
 @export var wait_time_seconds: float = 10
@@ -14,8 +14,6 @@ extends Node
 @onready var main_button: MainButton = %MainButton
 @onready var give_up_button: GiveUpButton = %GiveUpButton
 @onready var quest_generator: QuestGenerator = $QuestGenerator
-
-@onready var torch: PointLight2D = %Torch
 
 func _ready() -> void:
 	if !give_up_button:

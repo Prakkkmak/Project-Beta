@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_uw01u")
-name = "light_off"
+name = "light_buttons"
 data = {}
 score = 1201
