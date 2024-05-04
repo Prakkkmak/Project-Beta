@@ -192,7 +192,6 @@ _data = {
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
-starting_score = 1500
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -234,7 +233,7 @@ texture_scale = 50.0
 
 [node name="TextLight" type="PointLight2D" parent="LightManager"]
 unique_name_in_owner = true
-position = Vector2(0, 328)
+position = Vector2(2, 395)
 energy = 0.0
 texture = SubResource("GradientTexture2D_kbo5w")
 texture_scale = 5.0
