@@ -1,7 +1,7 @@
 class_name Main
 extends Node
 
-@export_file("*.tscn") var end_screen_file_path: String = "res://screens/end_screen/end_screen.tscn"
+@export_file("*.tscn") var leaderboard_screen_file_path: String = "res://screens/leaderboard_screen/leaderboard_screen.tscn"
 @export_range(0,10000) var starting_score: int = 0
 
 @export var forbidden_scores: Array[int] = [518]
@@ -24,11 +24,11 @@ func _ready() -> void:
 
 
 func _on_give_up_button_pressed() -> void:
-	if !end_screen_file_path:
+	if !leaderboard_screen_file_path:
 		push_warning("No end screen file path set")
 		return
 	Leaderboard.push_new_score(Score.score)
-	get_tree().change_scene_to_file(end_screen_file_path)
+	get_tree().change_scene_to_file(leaderboard_screen_file_path)
 
 
 func _on_score_changed(old_score: int, new_score: int) -> void:

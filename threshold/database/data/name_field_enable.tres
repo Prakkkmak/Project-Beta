@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FeatureEnablerThreshold" load_steps=2 format=3 uid="uid://cj737ktwj4oa3"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/feature_enabler_threshold.gd" id="1_gude7"]
+
+[resource]
+script = ExtResource("1_gude7")
+to_enable_list = Array[String](["name_field"])
+to_disable_list = Array[String]([])
+score = 100
