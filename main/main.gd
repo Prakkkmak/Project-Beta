@@ -29,13 +29,6 @@ func _on_give_up_button_pressed() -> void:
 		return
 	Leaderboard.push_new_score(Score.score)
 	get_tree().change_scene_to_file(end_screen_file_path)
-	
-
-func _on_french_button_pressed() -> void:
-	TranslationServer.set_locale("fr")
-
-func _on_english_button_pressed() -> void:
-	TranslationServer.set_locale("en")
 
 
 func _on_score_changed(old_score: int, new_score: int) -> void:
