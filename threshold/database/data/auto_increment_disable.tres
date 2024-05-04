@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CustomEventThreshold" load_steps=2 format=3 uid="uid://c8diu2oabme24"]
+
+[ext_resource type="Script" path="res://threshold/event_threshold/custom_event_threshold.gd" id="1_7dabq"]
+
+[resource]
+script = ExtResource("1_7dabq")
+name = "auto_increment_disable"
+data = {}
+score = 1525
