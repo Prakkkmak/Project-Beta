@@ -6,7 +6,7 @@ extends Node
 
 @export var forbidden_scores: Array[int] = [518]
 @export var wait_time_seconds: float = 10
-@export var broken_time_secondes: float = 120
+@export var broken_time_secondes: float = 100
 
 @onready var french_button: Button = %FrenchButton
 @onready var english_button: Button = %EnglishButton
