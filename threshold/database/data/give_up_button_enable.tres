@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_he12p")
-to_enable_list = Array[String](["give_up_button"])
+to_enable_list = Array[String](["give_up_button", "give_up_button_indicator"])
 to_disable_list = Array[String]([])
 score = 150
