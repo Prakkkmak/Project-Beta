@@ -18,12 +18,12 @@ extends Node
 func _ready() -> void:
 	if !give_up_button:
 		return
-	give_up_button.released.connect(_on_give_up_button_pressed)
+	give_up_button.released.connect(_on_give_up_button_released)
 	Score.changed.connect(_on_score_changed)
 	Score.set_score(starting_score)
 
 
-func _on_give_up_button_pressed() -> void:
+func _on_give_up_button_released() -> void:
 	if !leaderboard_screen_file_path:
 		push_warning("No end screen file path set")
 		return

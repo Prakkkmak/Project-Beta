@@ -70,6 +70,8 @@ columns = 2
 [node name="EnButton" type="TextureButton" parent="GridContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
+toggle_mode = true
+button_pressed = true
 texture_normal = ExtResource("6_j0a8t")
 texture_pressed = ExtResource("7_37r30")
 texture_hover = ExtResource("6_j0a8t")
@@ -77,6 +79,7 @@ texture_hover = ExtResource("6_j0a8t")
 [node name="FrButton" type="TextureButton" parent="GridContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
+toggle_mode = true
 texture_normal = ExtResource("8_qjes3")
 texture_pressed = ExtResource("9_3a8h1")
 texture_hover = ExtResource("8_qjes3")

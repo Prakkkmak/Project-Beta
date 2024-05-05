@@ -14,6 +14,7 @@ func _ready() -> void:
 	leaderboard_button.pressed.connect(_on_leaderboard_button_pressed)
 	en_button.pressed.connect(_on_english_button_pressed)
 	fr_button.pressed.connect(_on_french_button_pressed)
+	TranslationServer.set_locale("en")
 
 
 func _on_start_button_pressed() -> void:
@@ -32,7 +33,9 @@ func _on_leaderboard_button_pressed() -> void:
 
 func _on_french_button_pressed() -> void:
 	TranslationServer.set_locale("fr")
+	en_button.button_pressed = false
 
 
 func _on_english_button_pressed() -> void:
 	TranslationServer.set_locale("en")
+	fr_button.button_pressed = false

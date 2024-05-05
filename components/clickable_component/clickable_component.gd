@@ -23,11 +23,11 @@ func _on_mouse_entered() -> void:
 
 
 func _on_mouse_exited() -> void:
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 	if !is_pressed:
 		return
 	released.emit()
 	is_pressed = false
-	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

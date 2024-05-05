@@ -22,21 +22,25 @@ func load_leaderboard() -> void:
 	http_request_get_leaderboard.request_completed.connect(_on_request_completed)
 
 func push_new_score(score: int, username: String = "") -> void:
+	print("Try to push the socre of " + username)
 	if !username:
+		print("No username so let's do " + current_name)
 		username = current_name
 	var body: String  = JSON.new().stringify({"username": username, "score": score})
-	http_request_post_score.request(BASE_URL + "/submit-score", [], HTTPClient.METHOD_POST, body)
-	# Update the signal connection for the response
+	var headers: PackedStringArray = ["Content-Type: application/json"]
+	http_request_post_score.request(BASE_URL + "/submit-score", headers, HTTPClient.METHOD_POST, body)
 	http_request_post_score.request_completed.connect(_on_score_submitted)
 
 func set_current_name(new_name: String) -> void:
+	if current_name.is_empty():
+		return
 	current_name = new_name
 
 
 func _on_score_submitted(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
-	# Handle the response, then reload the leaderboard
-	load_leaderboard()
+	print("response " + str(response_code))
 	player_score_added.emit()
+	load_leaderboard()
 
 func _on_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
 	var json: Dictionary = JSON.parse_string(body.get_string_from_utf8())
@@ -45,6 +49,7 @@ func _on_request_completed(result: int, response_code: int, headers: PackedStrin
 		return
 	print(json)
 	var res: Array = json["data"]
+	player_scores_sorted = []
 	for e: Dictionary in res:
 		player_scores_sorted.append(e)
 	sort_and_assign_positions()

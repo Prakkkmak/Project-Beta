@@ -5,7 +5,7 @@
 [node name="NameField" type="Marker2D"]
 script = ExtResource("1_3f7id")
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="TextEdit" type="LineEdit" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 40)
 anchors_preset = 8
@@ -20,4 +20,5 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-text = "Lambda Guy"
+text = "Best Pusher"
+placeholder_text = "Name"
