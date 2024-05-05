@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://hafg0f424wlf"]
 
 [ext_resource type="Script" path="res://screens/title_screen/title_screen.gd" id="1_8snak"]
-[ext_resource type="Texture2D" uid="uid://cfmhoxhd2c1c8" path="res://assets/sprites/play button.png" id="2_olnvp"]
 [ext_resource type="Texture2D" uid="uid://5mryod66vs3w" path="res://assets/sprites/leaderboard_button.png" id="2_sil2t"]
+[ext_resource type="Texture2D" uid="uid://c7yt3cke6n3i0" path="res://assets/sprites/play_button.png" id="2_yxapl"]
 [ext_resource type="Texture2D" uid="uid://di3eulrxrohq2" path="res://assets/sprites/play_button_pressed.png" id="3_dyx08"]
 [ext_resource type="Texture2D" uid="uid://bcdinilakqhbc" path="res://assets/sprites/leaderboard_button_pressed.png" id="5_d2g43"]
 [ext_resource type="Texture2D" uid="uid://cqkr5fhe6h2xh" path="res://assets/sprites/EN_button.png" id="6_j0a8t"]
@@ -23,51 +23,56 @@ theme_override_colors/font_color = Color(0.996078, 1, 0.937255, 1)
 theme_override_font_sizes/font_size = 45
 text = "Keep Pushing The Button Please"
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="GridContainer3" type="GridContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -424.0
-offset_top = -162.5
-offset_right = 424.0
-offset_bottom = 162.5
+offset_left = -170.0
+offset_top = -84.0
+offset_right = 170.0
+offset_bottom = 84.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 200
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 100
 columns = 2
 
-[node name="StartButton" type="TextureButton" parent="GridContainer"]
+[node name="StartButton" type="TextureButton" parent="GridContainer3"]
 unique_name_in_owner = true
 layout_mode = 2
-texture_normal = ExtResource("2_olnvp")
+texture_normal = ExtResource("2_yxapl")
 texture_pressed = ExtResource("3_dyx08")
-texture_hover = ExtResource("2_olnvp")
+texture_hover = ExtResource("2_yxapl")
 
-[node name="LeaderboardButton" type="TextureButton" parent="GridContainer"]
+[node name="LeaderboardButton" type="TextureButton" parent="GridContainer3"]
 unique_name_in_owner = true
 layout_mode = 2
 texture_normal = ExtResource("2_sil2t")
 texture_pressed = ExtResource("5_d2g43")
 texture_hover = ExtResource("2_sil2t")
 
-[node name="GridContainer2" type="GridContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -97.0
-offset_top = -106.0
+offset_top = -156.0
 offset_right = 97.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/margin_bottom = 50
+
+[node name="GridContainer2" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/h_separation = 50
 columns = 2
 
-[node name="EnButton" type="TextureButton" parent="GridContainer2"]
+[node name="EnButton" type="TextureButton" parent="MarginContainer/GridContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -76,7 +81,7 @@ texture_normal = ExtResource("6_j0a8t")
 texture_pressed = ExtResource("7_37r30")
 texture_hover = ExtResource("6_j0a8t")
 
-[node name="FrButton" type="TextureButton" parent="GridContainer2"]
+[node name="FrButton" type="TextureButton" parent="MarginContainer/GridContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
