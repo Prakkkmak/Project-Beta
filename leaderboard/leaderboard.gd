@@ -10,7 +10,7 @@ const BASE_URL: String = "https://luxuriant-longhaired-silk.glitch.me"
 @onready var http_request_post_score: HTTPRequest = $HTTPRequestPostScore
 @onready var http_request_get_leaderboard: HTTPRequest = $HTTPRequestGetLeaderboard
 
-var current_name: String = ""
+var current_name: String = "Best Pusher"
 var player_scores_sorted: Array[Dictionary] = []
 
 func _ready() -> void:
@@ -25,6 +25,8 @@ func push_new_score(score: int, username: String = "") -> void:
 	print("Try to push the socre of " + username)
 	if !username:
 		print("No username so let's do " + current_name)
+		if current_name.is_empty():
+			current_name = "Best Pusher"
 		username = current_name
 	var body: String  = JSON.new().stringify({"username": username, "score": score})
 	var headers: PackedStringArray = ["Content-Type: application/json"]
