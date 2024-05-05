@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_xfiei")
-texts = Array[String](["550_TXT_1", "550_TXT_2", "550_TXT_3"])
+texts = Array[String](["550_TXT_1", "550_TXT_2"])
 score = 550

@@ -18,8 +18,8 @@ STOP_AT_518_TXT_3,"Hold on tight. 518: DON’T TOUCH ANYTHING
 ",N'appuis pas sur le bouton pendant 10 secondes !
 300_TXT_1,"Wow, you're still here!","Wow, tu es toujours là !"
 300_TXT_2,Go to 500 and I will reveal to you the meaning of life.,Vas jusque 500 et je te révèlerai le sens de la vie.
-300_TXT_3,"Spoiler: Maybe it's just keep clicking.
-",Spoiler: C'est peut être juste de continuer de cliquer.
+300_TXT_3,"Spoiler: Maybe it's just keep pressing.
+",Spoiler: C'est peut être juste de continuer d'appuyer.
 GO_TO_500_QST,Reache 500 points,Atteindre 500 points
 500_TXT_1,Good job ! You've won...,Bravo ! Tu as gagné...
 500_TXT_2,"The right to continue pressing this button.
@@ -32,14 +32,14 @@ GO_TO_500_QST,Reache 500 points,Atteindre 500 points
 ",Tu sais que ça fait déjà plusieurs minutes que tu ne fais qu'activer un bouton ?
 650_TXT_2,There are more productive things.,Il y a plus productif dans la vie.
 650_TXT_3,You can always give up.,Tu peux toujours abandonner.
-650_TXT_4,"It's easy, you just have to click on the red button. And I know you know how to do that.","C'est facile, tu as juste a cliquer sur le boutton rouge. Et ça je sais que tu sais le faire."
+650_TXT_4,"It's easy, you just have to press the red button. And I know you know how to do that.","C'est facile, tu as juste a appuyer sur le boutton rouge. Et ça je sais que tu sais le faire."
 GO_TO_1000_TXT,"Now that you've gotten this far you can go up to 1000 right? I promise you a great reward!
-",Maintenant que tu es arrivé jusque là tu peux aller jusque 1000 non ? Je te promet une super récompense !
+",Maintenant que tu es arrivé jusque là tu peux aller jusque 1000 non ? Je te promet une superbe récompense !
 1000_TXT_1,"Wow, it’s worth celebrating!
 ",Wow ça se fête !
 1000_TXT_2,"Just keep going a little longer, while I prepare a little surprise for you!","Continue juste un peu plus, le temps que je te prépare une petite surprise !"
 RDM_QST_1,You should give up,Tu devrais abandonner
-RDM_QST_2,"Click on the red button and give up
+RDM_QST_2,"Press on the red button and give up
 ",Clique sur le bouton rouge et abandonne
 RDM_QST_3,#NAME?,#NAME?
 RDM_QST_4,Xoxo,Xoxo
@@ -49,9 +49,9 @@ CLEAN_TXT_1,"It's getting messy around here.
 ",Ça devient le bordel par ici.
 CLEAN_TXT_2,"I will look for a solution.
 ",Je vais chercher une solution.
-CLEAN_TXT_3,Keep clicking!,"Toi, continue de cliquer !"
+CLEAN_TXT_3,Keep pressing!,"Toi, continue d'appuyer !"
 CLEAN_TXT_4,"Good news !
-",Bonnes nouvelles !
+",Bonne nouvelle !
 CLEAN_TXT_5,"I'll bring you a trash can. You will be able to sort!
 ",Je t'apporte une poubelle. Tu vas pouvoir faire du tri !
 GO_TO_1000_QST,Reache 1000 points,Atteindre 1000 points
@@ -115,15 +115,15 @@ SWITCH_OFF_LIGHT_TXT_6,"Keep pressing.
 ",Continue d'appuyer en attendant.
 SPAWN_BUTTON_LIGHT_TXT_1,"It's good I found!
 ",C'est bon j'ai trouvé !
-SPAWN_BUTTON_LIGHT_TXT_2,"To turn the power back on, you'll have to find 3 buttons and press them.
-","Pour remettre le courant, tu vas devoir trouver 3 boutons et appuyer dessus.."
+SPAWN_BUTTON_LIGHT_TXT_2,"To turn the power back on, you'll have to find the 3 buttons and press them.
+","Pour remettre le courant, tu vas devoir trouver les 3 boutons et appuyer dessus.."
 LIGHT_BUTTTON_PRESSED_TXT_1,Well done!,Bien joué !
 LIGHT_BUTTTON_PRESSED_TXT_2,                                       ,                                       
 LIGHT_BUTTTON_PRESSED_TXT_3,You are able ton continue.,Tu vas pouvoir continuer normalement.
 ,,
-1250_TXT_1,Unfortunately this is the end of the demo. You can give up here.,Malheureusement c'est la fin de la démo. Tu peux abandonner ici.
-1250_TXT_2,You can still continue to increase your score and show who is the strongest (or craziest).,Tu peux toujours continuer pour augmenter ton score et montrer qui est le plus fort (ou le plus fou).
-1250_TXT_3,"But there won't be much new after that.
+1500_TXT_1,Unfortunately this is the end of the demo. You can give up here.,Malheureusement c'est la fin de la démo. Tu peux abandonner ici.
+1500_TXT_2,You can still continue to increase your score and show who is the strongest (or craziest).,Tu peux toujours continuer pour augmenter ton score et montrer qui est le plus fort (ou le plus fou).
+1500_TXT_3,"But there won't be much new after that.
 ",Mais il n'y aura pas grand chose de nouveau après ça.
 ,,
 2000_TXT,"Really, why do you keep going? Give up!","Vraiment, pourquoi tu continue ? Abandonne !"
@@ -145,4 +145,6 @@ NAME_FIELD_TXT,"Just one thing. If you ever want to leave a mark somewhere, writ
 ,,
 AUDIO_PLAYER_TXT_1,"It's a little too quiet around here, isn't it?
 ",C'est un peu trop calme par ici non ?
-AUDIO_PLAYER_TXT_2,"I'll play some music for you, but you can turn it off if you prefer this heavy silence.","Je te mets un peu de musique, mais tu peux la désactiver si tu préfères ce silence pesant."
+AUDIO_PLAYER_TXT_2,"Hey, this should be better. You can now activate the music. That's great, isn't it?","Tiens, avec ça ça devrais être mieux. Tu peux maintenant activer la musique. C'est super non ?"
+,,
+GO_TO_1300_QST,Reache 500 points,Atteindre 1300 points
