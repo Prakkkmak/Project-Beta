@@ -331,7 +331,7 @@ position = Vector2(2, 372)
 time_per_character = 0.07
 
 [node name="NameField" parent="." instance=ExtResource("9_kedi5")]
-position = Vector2(988, -566)
+position = Vector2(949, -596)
 
 [node name="AudioPlayer" parent="." instance=ExtResource("13_7bkuw")]
 position = Vector2(960, -503)
