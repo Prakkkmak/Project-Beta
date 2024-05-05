@@ -193,7 +193,6 @@ _data = {
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5dvk3")
-starting_score = 99
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -331,7 +330,8 @@ position = Vector2(2, 372)
 time_per_character = 0.07
 
 [node name="NameField" parent="." instance=ExtResource("9_kedi5")]
-position = Vector2(949, -596)
+position = Vector2(874, -607)
+scale = Vector2(1.5, 1.5)
 
 [node name="AudioPlayer" parent="." instance=ExtResource("13_7bkuw")]
 position = Vector2(960, -503)
