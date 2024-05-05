@@ -7,9 +7,9 @@ QUEST_INTRO_QST,"Press the button 100 times.
 FIRST_QUEST_ACHIEVED_TXT_1,"WELL DONE ! You are able to follow simple instructions.
 ",BRAVO ! Tu es capable de suivre des instructions simples.
 FIRST_QUEST_ACHIEVED_TXT_2,"As a reward, I now let you see your score
-","En récompense, je te laisse maintenant voir ton score."
+","En récompense, je te laisse maintenant voir ton score,"
 FIRST_QUEST_ACHIEVED_TXT_3,"Great, right?",Génial non ?
-RANDOM_QUEST_TXT_1,thebestpusher@dontgiveup.com,thebestpusher@dontgiveup.com
+RANDOM_QUEST_TXT_1,pusher@dontgiveup.com,pusher@dontgiveup.com
 STOP_AT_518_TXT_1,Super important:,Super important:
 STOP_AT_518_TXT_2,At 518 don't touch the button.,A 518 surtout ne touche pas le bouton.
 STOP_AT_518_TXT_3,"Hold on tight. 518: DON’T TOUCH ANYTHING
