@@ -8,5 +8,7 @@ func _ready() -> void:
 	text_edit.text_changed.connect(_on_text_changed)
 
 
-func _on_text_changed() -> void:
-	Leaderboard.set_current_name(text_edit.text)
+func _on_text_changed(text_changed: String) -> void:
+	print("text changed")
+	print(text_changed)
+	Leaderboard.set_current_name(text_changed)
