@@ -87,3 +87,4 @@ texture_hover = ExtResource("8_qjes3")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_7exmk")
 autoplay = true
+bus = &"Music"
