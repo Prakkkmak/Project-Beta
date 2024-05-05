@@ -7,11 +7,11 @@ QUEST_INTRO_QST,"Press the button 100 times.
 FIRST_QUEST_ACHIEVED_TXT_1,"WELL DONE ! You are able to follow simple instructions.
 ",BRAVO ! Tu es capable de suivre des instructions simples.
 FIRST_QUEST_ACHIEVED_TXT_2,"As a reward, I now let you see your score
-","En récompense, je te laisse maintenant voir ton score"
+","En récompense, je te laisse maintenant voir ton score."
 FIRST_QUEST_ACHIEVED_TXT_3,"Great, right?",Génial non ?
-RANDOM_QUEST_TXT_1,bg@aa.com,bg@aa.com
-STOP_AT_518_TXT_1,Super important,Super important
-STOP_AT_518_TXT_2,At 518 don't touch the button,A 518 surtout ne touche pas le bouton
+RANDOM_QUEST_TXT_1,thebestpusher@dontgiveup.com,thebestpusher@dontgiveup.com
+STOP_AT_518_TXT_1,Super important:,Super important:
+STOP_AT_518_TXT_2,At 518 don't touch the button.,A 518 surtout ne touche pas le bouton.
 STOP_AT_518_TXT_3,"Hold on tight. 518: DON’T TOUCH ANYTHING
 ",Retiens bien. 518 : NE TOUCHE A RIEN
 518_QST,"Do not press the button for 10 seconds!
@@ -20,7 +20,7 @@ STOP_AT_518_TXT_3,"Hold on tight. 518: DON’T TOUCH ANYTHING
 300_TXT_2,Go to 500 and I will reveal to you the meaning of life.,Vas jusque 500 et je te révèlerai le sens de la vie.
 300_TXT_3,"Spoiler: Maybe it's just keep pressing.
 ",Spoiler: C'est peut être juste de continuer d'appuyer.
-GO_TO_500_QST,Reache 500 points,Atteindre 500 points
+GO_TO_500_QST,Reach 500 points.,Atteindre 500 points.
 500_TXT_1,Good job ! You've won...,Bravo ! Tu as gagné...
 500_TXT_2,"The right to continue pressing this button.
 ",Le droit de continuer d'appuyer sur ce bouton.
@@ -28,8 +28,7 @@ GO_TO_500_QST,Reache 500 points,Atteindre 500 points
 550_TXT_1,"I see you're still here.
 ",Je vois que tu es toujours là.
 550_TXT_2,"Well done, you are perseverant. Keep it up!",Bravo tu es persévérant. Continue comme ça !
-650_TXT_1,"Do you know that it's already been several minutes since you just pressed a button?
-",Tu sais que ça fait déjà plusieurs minutes que tu ne fais qu'activer un bouton ?
+650_TXT_1,Do you know that you've been pressing a button for several minutes now ?,Tu sais que ça fait déjà plusieurs minutes que tu ne fais qu'activer un bouton ?
 650_TXT_2,There are more productive things.,Il y a plus productif dans la vie.
 650_TXT_3,You can always give up.,Tu peux toujours abandonner.
 650_TXT_4,"It's easy, you just have to press the red button. And I know you know how to do that.","C'est facile, tu as juste a appuyer sur le boutton rouge. Et ça je sais que tu sais le faire."
@@ -54,7 +53,7 @@ CLEAN_TXT_4,"Good news !
 ",Bonne nouvelle !
 CLEAN_TXT_5,"I'll bring you a trash can. You will be able to sort!
 ",Je t'apporte une poubelle. Tu vas pouvoir faire du tri !
-GO_TO_1000_QST,Reache 1000 points,Atteindre 1000 points
+GO_TO_1000_QST,Reach 1000 points,Atteindre 1000 points
 GIVE_UP_APPEAR_TXT_1,"See that button at the bottom right?
 ",Tu vois ce bouton en bas à droite ?
 GIVE_UP_APPEAR_TXT_2,"Don't touch it!
@@ -113,16 +112,16 @@ SWITCH_OFF_LIGHT_TXT_5,"I will try to find a solution...
 ",Je vais tenter de trouver une solution...
 SWITCH_OFF_LIGHT_TXT_6,"Keep pressing.
 ",Continue d'appuyer en attendant.
-SPAWN_BUTTON_LIGHT_TXT_1,"It's good I found!
+SPAWN_BUTTON_LIGHT_TXT_1,"It's good I found a solution !
 ",C'est bon j'ai trouvé !
 SPAWN_BUTTON_LIGHT_TXT_2,"To turn the power back on, you'll have to find the 3 buttons and press them.
 ","Pour remettre le courant, tu vas devoir trouver les 3 boutons et appuyer dessus.."
 LIGHT_BUTTTON_PRESSED_TXT_1,Well done!,Bien joué !
 LIGHT_BUTTTON_PRESSED_TXT_2,                                       ,                                       
-LIGHT_BUTTTON_PRESSED_TXT_3,You are able ton continue.,Tu vas pouvoir continuer normalement.
+LIGHT_BUTTTON_PRESSED_TXT_3,You are able to continue normaly.,Tu vas pouvoir continuer normalement.
 ,,
 1500_TXT_1,Unfortunately this is the end of the demo. You can give up here.,Malheureusement c'est la fin de la démo. Tu peux abandonner ici.
-1500_TXT_2,You can still continue to increase your score and show who is the strongest (or craziest).,Tu peux toujours continuer pour augmenter ton score et montrer qui est le plus fort (ou le plus fou).
+1500_TXT_2,You can still continue to increase your score and show them who is the strongest (or craziest).,Tu peux toujours continuer pour augmenter ton score et montrer qui est le plus fort (ou le plus fou).
 1500_TXT_3,"But there won't be much new after that.
 ",Mais il n'y aura pas grand chose de nouveau après ça.
 ,,
@@ -147,4 +146,4 @@ AUDIO_PLAYER_TXT_1,"It's a little too quiet around here, isn't it?
 ",C'est un peu trop calme par ici non ?
 AUDIO_PLAYER_TXT_2,"Hey, this should be better. You can now activate the music. That's great, isn't it?","Tiens, avec ça ça devrais être mieux. Tu peux maintenant activer la musique. C'est super non ?"
 ,,
-GO_TO_1300_QST,Reache 500 points,Atteindre 1300 points
+GO_TO_1300_QST,Reach 1300  points,Atteindre 1300 points

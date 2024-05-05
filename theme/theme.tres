@@ -1,8 +1,34 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cxo3ge4duc5lx"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cxo3ge4duc5lx"]
 
 [ext_resource type="FontFile" uid="uid://csh0tg2utecuq" path="res://theme/fonts/Nunito-Black.ttf" id="1_4xb5n"]
+[ext_resource type="Texture2D" uid="uid://1fdn0q76l12i" path="res://assets/sprites/lineField.png" id="2_dojj6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kv6s5"]
+texture = ExtResource("2_dojj6")
+texture_margin_left = 11.6091
+texture_margin_top = 11.1185
+texture_margin_right = 11.9361
+texture_margin_bottom = 11.282
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tloko"]
+texture = ExtResource("2_dojj6")
+texture_margin_left = 12.196
+texture_margin_top = 12.0996
+texture_margin_right = 12.3679
+texture_margin_bottom = 12.0996
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ul4y"]
+texture = ExtResource("2_dojj6")
+texture_margin_left = 12.0996
+texture_margin_top = 11.7726
+texture_margin_right = 11.9361
+texture_margin_bottom = 11.9361
 
 [resource]
 Label/colors/font_color = Color(0.227451, 0.34902, 0.419608, 1)
 Label/font_sizes/font_size = 16
 Label/fonts/font = ExtResource("1_4xb5n")
+LineEdit/colors/font_color = Color(0.207843, 0.352941, 0.447059, 1)
+LineEdit/styles/focus = SubResource("StyleBoxTexture_kv6s5")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_tloko")
+LineEdit/styles/read_only = SubResource("StyleBoxTexture_8ul4y")
